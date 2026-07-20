@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/goodays-openapi-original.json
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: tokenAuth
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: Personal access token supplied verbatim in the Authorization header (no Bearer
+    prefix). Obtain from your Goodays account manager.
+  sources:
+  - openapi/goodays-openapi-original.json
