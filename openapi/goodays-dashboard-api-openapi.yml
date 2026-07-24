@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Goodays core dashboard API
+  description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
+  version: v2
+servers:
+- url: https://api.goodays.co/v2
+security:
+- tokenAuth: []
+tags:
+- name: dashboard
+paths:
+  /dashboard:
+    get:
+      operationId: dashboard_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Dashboard_read'
+      parameters:
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: pro_user
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - dashboard
+components:
+  schemas:
+    Dashboard_read:
+      type: object
+      properties:
+        pending_alert:
+          type: integer
+        pending_reply:
+          type: integer
+      additionalProperties:
+        type: string
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Personal access token supplied verbatim in the Authorization header (no Bearer prefix). Obtain from your Goodays account manager.

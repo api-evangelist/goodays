@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: Goodays core session API
+  description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
+  version: v2
+servers:
+- url: https://api.goodays.co/v2
+security:
+- tokenAuth: []
+tags:
+- name: session
+paths:
+  /session:
+    get:
+      operationId: session_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Session_read'
+      tags:
+      - session
+components:
+  schemas:
+    Session_read:
+      type: object
+      properties:
+        username:
+          type: string
+        token:
+          type: string
+      additionalProperties:
+        type: string
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Personal access token supplied verbatim in the Authorization header (no Bearer prefix). Obtain from your Goodays account manager.

@@ -1,0 +1,1513 @@
+openapi: 3.0.0
+info:
+  title: Goodays core API
+  description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
+  version: v2
+servers:
+- url: https://api.goodays.co/v2
+security:
+- tokenAuth: []
+tags:
+- name: core
+paths:
+  /configuration:
+    get:
+      operationId: configuration_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Configuration_read'
+      tags:
+      - core
+  /levels:
+    get:
+      operationId: levels_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Level_read'
+      parameters:
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: category_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: number
+      tags:
+      - core
+  /levels/{id}:
+    get:
+      operationId: levels_read
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/LevelDetail_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: A unique value identifying this brand level.
+        schema:
+          type: string
+      tags:
+      - core
+  /levels/{level_pk}/places:
+    get:
+      operationId: levels_places_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Place_read'
+      parameters:
+      - name: level_pk
+        required: true
+        in: path
+        description: A unique value identifying the parent level.
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: partner_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /levels/{level_pk}/responses:
+    get:
+      operationId: levels_responses_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Response_read'
+      parameters:
+      - name: level_pk
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: start_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: date_field
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: first_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: last_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: email
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: phone
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: crm_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_answers
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_message
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_reply
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /levels/{level_pk}/responses/bulk:
+    get:
+      operationId: levels_responses_bulk
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseDetail_read'
+      parameters:
+      - name: level_pk
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /places:
+    get:
+      operationId: places_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Place_read'
+      parameters:
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: partner_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /places/{id}:
+    get:
+      operationId: places_read
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/PlaceDetail_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: A unique value identifying this place.
+        schema:
+          type: string
+      tags:
+      - core
+  /places/{place_pk}/levels:
+    get:
+      operationId: places_levels_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Level_read'
+      parameters:
+      - name: place_pk
+        required: true
+        in: path
+        description: A unique value identifying the parent place.
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: category_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: number
+      tags:
+      - core
+  /places/{place_pk}/responses:
+    get:
+      operationId: places_responses_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Response_read'
+      parameters:
+      - name: place_pk
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: start_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: date_field
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: first_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: last_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: email
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: phone
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: crm_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_answers
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_message
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_reply
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /places/{place_pk}/responses/bulk:
+    get:
+      operationId: places_responses_bulk
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseDetail_read'
+      parameters:
+      - name: place_pk
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /places/{place_pk}/surveys:
+    get:
+      operationId: places_surveys_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Survey_read'
+      parameters:
+      - name: place_pk
+        required: true
+        in: path
+        description: A unique value identifying the parent place.
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: slug
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /places/{place_pk}/users:
+    get:
+      operationId: places_users_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserProfile_read'
+      parameters:
+      - name: place_pk
+        required: true
+        in: path
+        description: A unique value identifying the parent place.
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: email
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: first_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: last_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: phone
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /surveys:
+    get:
+      operationId: surveys_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Survey_read'
+      parameters:
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: slug
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /surveys/{id}:
+    get:
+      operationId: surveys_read
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/SurveyDetail_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: A unique value identifying this rating question tag.
+        schema:
+          type: string
+      tags:
+      - core
+  /surveys/{survey_pk}/places:
+    get:
+      operationId: surveys_places_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Place_read'
+      parameters:
+      - name: survey_pk
+        required: true
+        in: path
+        description: A unique value identifying the parent survey.
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: partner_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /surveys/{survey_pk}/responses:
+    get:
+      operationId: surveys_responses_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Response_read'
+      parameters:
+      - name: survey_pk
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: start_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: date_field
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: first_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: last_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: email
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: phone
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: crm_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_answers
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_message
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_reply
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /surveys/{survey_pk}/responses/bulk:
+    get:
+      operationId: surveys_responses_bulk
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseDetail_read'
+      parameters:
+      - name: survey_pk
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /universes:
+    get:
+      operationId: universes_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Universe_read'
+      parameters:
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      tags:
+      - core
+  /users:
+    get:
+      operationId: users_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserProfile_read'
+      parameters:
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: email
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: first_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: last_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: phone
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+  /users/{id}:
+    get:
+      operationId: users_read
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserProfile_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: A unique value identifying this user profile.
+        schema:
+          type: string
+      tags:
+      - core
+  /users/{user_pk}/places:
+    get:
+      operationId: users_places_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Place_read'
+      parameters:
+      - name: user_pk
+        required: true
+        in: path
+        description: A unique value identifying the parent user.
+        schema:
+          type: string
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: partner_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - core
+components:
+  schemas:
+    Level_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        category_id:
+          type: integer
+        name:
+          type: string
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    PlaceDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        universe:
+          type: string
+        name:
+          type: string
+        street:
+          type: string
+        postal_code:
+          type: string
+        city:
+          type: string
+        phone:
+          type: string
+        latitude:
+          type: number
+        longitude:
+          type: number
+        lang:
+          type: string
+        is_active:
+          type: boolean
+        created_date:
+          type: string
+          format: date-time
+        logo:
+          type: string
+        levels:
+          type: string
+        surveys:
+          type: string
+        users:
+          type: string
+        responses:
+          type: string
+      additionalProperties:
+        type: string
+    SurveyDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        slug:
+          type: string
+        label:
+          type: string
+        enabled:
+          type: boolean
+        questions:
+          type: string
+        places:
+          type: string
+        responses:
+          type: string
+      additionalProperties:
+        type: string
+    Place_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        name:
+          type: string
+        enabled:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    Response_read:
+      type: object
+      properties:
+        id:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        updated_date:
+          type: string
+          format: date-time
+        has_answers:
+          type: boolean
+        has_message:
+          type: boolean
+        has_reply:
+          type: boolean
+        alert_triggered:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    LevelDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        category_id:
+          type: integer
+        category:
+          type: string
+        name:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        is_active:
+          type: string
+        lang:
+          type: string
+        places:
+          type: string
+        responses:
+          type: string
+      additionalProperties:
+        type: string
+    ResponseDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        token:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        updated_date:
+          type: string
+          format: date-time
+        source:
+          type: string
+          enum:
+          - email
+          - sms_trans
+          - sms_conv
+          - sms_text
+          - plv
+          - receipt
+          - google
+          - google_messaging
+          - critizr
+          - tripadvisor
+          - pagesjaunes
+          - sdk
+          - facebook
+          - facebook_reviews
+          - facebook_messenger
+          - widget
+          - terminal
+          - outbound_call
+          - wifi
+          - sms
+          - api
+          - undefined
+          - merci
+          - google_play_store
+          - apple_app_store
+          - uber_eats
+          - whatsapp
+        survey:
+          type: object
+          properties:
+            id:
+              type: string
+            slug:
+              type: string
+            label:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        answers:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              value:
+                type: string
+              question:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  title:
+                    type: string
+                  type:
+                    type: string
+                    enum:
+                    - none
+                    - stars
+                    - yesno
+                    - choices
+                    - nps
+                    - emoji
+                    - text
+                    - multiple_answers
+                    - csat
+                  enabled:
+                    type: boolean
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+        message:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - Question
+              - Idea
+              - Problem
+              - Praise
+              - Message
+              - NoType
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        reply:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - call
+              - text
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        user:
+          type: object
+          properties:
+            email:
+              type: string
+            first_name:
+              type: string
+            last_name:
+              type: string
+            opt_in:
+              type: object
+              properties:
+                newsletter:
+                  type: boolean
+                email:
+                  type: boolean
+                sms:
+                  type: boolean
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        context:
+          type: string
+        place:
+          type: object
+          properties:
+            id:
+              type: string
+            partner_id:
+              type: string
+            name:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        delegated_to:
+          type: object
+          properties:
+            id:
+              type: string
+            partner_id:
+              type: string
+            name:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        attached_messages:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              created_date:
+                type: string
+                format: date-time
+              type:
+                type: string
+                enum:
+                - Question
+                - Idea
+                - Problem
+                - Praise
+                - Message
+                - NoType
+              content:
+                type: string
+              attachment:
+                type: string
+              sender:
+                type: object
+                properties:
+                  email:
+                    type: string
+                  first_name:
+                    type: string
+                  last_name:
+                    type: string
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+        state:
+          type: string
+          enum:
+          - open
+          - closed
+          - spam
+        thread:
+          type: string
+        actions:
+          type: object
+          additionalProperties:
+            type: string
+        alert_triggered:
+          type: boolean
+      additionalProperties:
+        type: string
+    Universe_read:
+      type: object
+      properties:
+        id:
+          type: string
+        key:
+          type: string
+        label:
+          type: string
+      additionalProperties:
+        type: string
+    UserProfile_read:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        phone:
+          type: string
+        read_only:
+          type: boolean
+        notifications:
+          type: boolean
+        places:
+          type: string
+        last_login:
+          type: string
+          format: date-time
+        lang_training:
+          type: string
+          enum:
+          - fr
+          - en
+          - de
+          - it
+          - es
+          - nl
+          - ja
+      additionalProperties:
+        type: string
+    Configuration_read:
+      type: object
+      properties:
+        custom_parameters:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              label:
+                type: string
+              required:
+                type: boolean
+              use_in_stats:
+                type: boolean
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    Survey_read:
+      type: object
+      properties:
+        id:
+          type: string
+        slug:
+          type: string
+        label:
+          type: string
+        enabled:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Personal access token supplied verbatim in the Authorization header (no Bearer prefix). Obtain from your Goodays account manager.

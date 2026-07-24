@@ -1,0 +1,893 @@
+openapi: 3.0.0
+info:
+  title: Goodays core response API
+  description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
+  version: v2
+servers:
+- url: https://api.goodays.co/v2
+security:
+- tokenAuth: []
+tags:
+- name: response
+paths:
+  /responses:
+    post:
+      operationId: responses_create
+      responses:
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseBatchEntryCreate_write'
+      requestBody:
+        $ref: '#/components/requestBodies/levels_responses_collectData'
+      tags:
+      - response
+    get:
+      operationId: responses_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Response_read'
+      parameters:
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: start_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end_date
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: date_field
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: first_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: last_name
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: email
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: phone
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: crm_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_answers
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_message
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: has_reply
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - response
+  /responses/bulk:
+    get:
+      operationId: responses_bulk
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseDetail_read'
+      tags:
+      - response
+  /responses/collect:
+    post:
+      operationId: responses_collect
+      responses:
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseCollect_write'
+      requestBody:
+        $ref: '#/components/requestBodies/levels_responses_collectData'
+      tags:
+      - response
+  /responses/{id}:
+    get:
+      operationId: responses_read
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseDetail_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      tags:
+      - response
+  /responses/{id}/call:
+    put:
+      operationId: responses_call
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseActionCall_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  description: ''
+                  type: string
+                note:
+                  description: ''
+                  type: string
+                rating:
+                  description: ''
+                  type: integer
+      tags:
+      - response
+  /responses/{id}/close:
+    put:
+      operationId: responses_close
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseActionClose_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/responses_closeData'
+      tags:
+      - response
+  /responses/{id}/message:
+    put:
+      operationId: responses_message
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseActionMessage_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  description: ''
+                  type: string
+                content:
+                  description: ''
+                  type: string
+              required:
+              - content
+      tags:
+      - response
+  /responses/{id}/reply:
+    put:
+      operationId: responses_reply
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseActionReply_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  description: ''
+                  type: string
+                content:
+                  description: ''
+                  type: string
+                remark_type:
+                  description: ''
+                  type: string
+              required:
+              - content
+      tags:
+      - response
+  /responses/{id}/spam:
+    put:
+      operationId: responses_spam
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ResponseActionSpam_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/responses_closeData'
+      tags:
+      - response
+components:
+  schemas:
+    ResponseActionMessage_read:
+      type: object
+      properties:
+        user:
+          type: string
+        content:
+          type: string
+      additionalProperties:
+        type: string
+    Response_read:
+      type: object
+      properties:
+        id:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        updated_date:
+          type: string
+          format: date-time
+        has_answers:
+          type: boolean
+        has_message:
+          type: boolean
+        has_reply:
+          type: boolean
+        alert_triggered:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    ResponseBatchEntryCreate_write:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+        user:
+          type: object
+          properties:
+            email:
+              type: string
+            first_name:
+              type: string
+            last_name:
+              type: string
+            phone:
+              type: string
+            crm_id:
+              type: string
+          additionalProperties:
+            type: string
+        context:
+          type: object
+          additionalProperties:
+            type: string
+        place:
+          type: string
+        survey:
+          type: string
+        drop_invalid_facultative_answers:
+          type: boolean
+        answers:
+          type: array
+          items:
+            type: object
+            properties:
+              question:
+                type: string
+              value:
+                type: string
+            additionalProperties:
+              type: string
+        medium:
+          type: string
+          enum:
+          - API
+          - FB
+          - MER
+          - MOB
+          - OC
+          - QR
+          - REC
+          - SMC
+          - SMS
+          - TE
+          - TMC
+          - TRM
+          - TS
+          - WA
+          - WEB
+          - WI
+        message:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - Question
+              - Idea
+              - Problem
+              - Praise
+              - Message
+              - NoType
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        collect_uid:
+          type: string
+      additionalProperties:
+        type: string
+    ResponseActionCall_read:
+      type: object
+      properties:
+        user:
+          type: string
+        note:
+          type: string
+        rating:
+          type: integer
+      additionalProperties:
+        type: string
+    ResponseDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        token:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        updated_date:
+          type: string
+          format: date-time
+        source:
+          type: string
+          enum:
+          - email
+          - sms_trans
+          - sms_conv
+          - sms_text
+          - plv
+          - receipt
+          - google
+          - google_messaging
+          - critizr
+          - tripadvisor
+          - pagesjaunes
+          - sdk
+          - facebook
+          - facebook_reviews
+          - facebook_messenger
+          - widget
+          - terminal
+          - outbound_call
+          - wifi
+          - sms
+          - api
+          - undefined
+          - merci
+          - google_play_store
+          - apple_app_store
+          - uber_eats
+          - whatsapp
+        survey:
+          type: object
+          properties:
+            id:
+              type: string
+            slug:
+              type: string
+            label:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        answers:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              value:
+                type: string
+              question:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  title:
+                    type: string
+                  type:
+                    type: string
+                    enum:
+                    - none
+                    - stars
+                    - yesno
+                    - choices
+                    - nps
+                    - emoji
+                    - text
+                    - multiple_answers
+                    - csat
+                  enabled:
+                    type: boolean
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+        message:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - Question
+              - Idea
+              - Problem
+              - Praise
+              - Message
+              - NoType
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        reply:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - call
+              - text
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        user:
+          type: object
+          properties:
+            email:
+              type: string
+            first_name:
+              type: string
+            last_name:
+              type: string
+            opt_in:
+              type: object
+              properties:
+                newsletter:
+                  type: boolean
+                email:
+                  type: boolean
+                sms:
+                  type: boolean
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        context:
+          type: string
+        place:
+          type: object
+          properties:
+            id:
+              type: string
+            partner_id:
+              type: string
+            name:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        delegated_to:
+          type: object
+          properties:
+            id:
+              type: string
+            partner_id:
+              type: string
+            name:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        attached_messages:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              created_date:
+                type: string
+                format: date-time
+              type:
+                type: string
+                enum:
+                - Question
+                - Idea
+                - Problem
+                - Praise
+                - Message
+                - NoType
+              content:
+                type: string
+              attachment:
+                type: string
+              sender:
+                type: object
+                properties:
+                  email:
+                    type: string
+                  first_name:
+                    type: string
+                  last_name:
+                    type: string
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+        state:
+          type: string
+          enum:
+          - open
+          - closed
+          - spam
+        thread:
+          type: string
+        actions:
+          type: object
+          additionalProperties:
+            type: string
+        alert_triggered:
+          type: boolean
+      additionalProperties:
+        type: string
+    ResponseActionClose_read:
+      type: object
+      properties:
+        user:
+          type: string
+        remark_type:
+          type: string
+          enum:
+          - Question
+          - Idea
+          - Problem
+          - Praise
+          - Message
+          - NoType
+      additionalProperties:
+        type: string
+    ResponseActionReply_read:
+      type: object
+      properties:
+        user:
+          type: string
+        content:
+          type: string
+        remark_type:
+          type: string
+          enum:
+          - Question
+          - Idea
+          - Problem
+          - Praise
+          - Message
+          - NoType
+      additionalProperties:
+        type: string
+    ResponseActionSpam_read:
+      type: object
+      properties:
+        user:
+          type: string
+        remark_type:
+          type: string
+          enum:
+          - Question
+          - Idea
+          - Problem
+          - Praise
+          - Message
+          - NoType
+      additionalProperties:
+        type: string
+    ResponseCollect_write:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+        user:
+          type: object
+          properties:
+            email:
+              type: string
+            first_name:
+              type: string
+            last_name:
+              type: string
+            phone:
+              type: string
+            crm_id:
+              type: string
+          additionalProperties:
+            type: string
+        context:
+          type: object
+          additionalProperties:
+            type: string
+        place:
+          type: string
+        survey:
+          type: string
+        drop_invalid_facultative_answers:
+          type: boolean
+        answers:
+          type: array
+          items:
+            type: object
+            properties:
+              question:
+                type: string
+              value:
+                type: string
+            additionalProperties:
+              type: string
+        medium:
+          type: string
+          enum:
+          - API
+          - FB
+          - MER
+          - MOB
+          - OC
+          - QR
+          - REC
+          - SMC
+          - SMS
+          - TE
+          - TMC
+          - TRM
+          - TS
+          - WA
+          - WEB
+          - WI
+        message:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - Question
+              - Idea
+              - Problem
+              - Praise
+              - Message
+              - NoType
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        collect_uid:
+          type: string
+      additionalProperties:
+        type: string
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Personal access token supplied verbatim in the Authorization header (no Bearer prefix). Obtain from your Goodays account manager.

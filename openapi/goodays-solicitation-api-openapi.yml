@@ -1,0 +1,301 @@
+openapi: 3.0.0
+info:
+  title: Goodays core solicitation API
+  description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
+  version: v2
+servers:
+- url: https://api.goodays.co/v2
+security:
+- tokenAuth: []
+tags:
+- name: solicitation
+paths:
+  /solicitations:
+    post:
+      operationId: solicitations_create
+      responses:
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/SolicitationCreate_write'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                place:
+                  description: ''
+                  type: string
+                type:
+                  description: ''
+                  type: string
+                survey:
+                  description: ''
+                  type: string
+                sender:
+                  description: ''
+                  type: string
+                recipient:
+                  description: ''
+                  type: string
+                context:
+                  description: ''
+                  type: object
+                  properties: {}
+              required:
+              - place
+              - type
+              - survey
+              - sender
+              - recipient
+              - context
+      tags:
+      - solicitation
+    get:
+      operationId: solicitations_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Solicitation_read'
+      parameters:
+      - name: cursor
+        required: false
+        in: query
+        description: The pagination cursor value.
+        schema:
+          type: string
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - name: sort
+        required: false
+        in: query
+        description: Which field to use when ordering the results.
+        schema:
+          type: string
+      - name: recipient
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: partner_id
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: is_success
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: type
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - solicitation
+  /solicitations/bulk:
+    post:
+      operationId: solicitations_bulk
+      responses:
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/SolicitationBulkCreate_write'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                place:
+                  description: ''
+                  type: string
+                type:
+                  description: ''
+                  type: string
+                survey:
+                  description: ''
+                  type: string
+                sender:
+                  description: ''
+                  type: string
+                data:
+                  description: ''
+                  type: array
+                  items:
+                    type: string
+              required:
+              - place
+              - type
+              - survey
+              - sender
+              - data
+      tags:
+      - solicitation
+  /solicitations/{id}:
+    get:
+      operationId: solicitations_read
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/SolicitationDetail_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: A unique value identifying this push transaction.
+        schema:
+          type: string
+      tags:
+      - solicitation
+components:
+  schemas:
+    SolicitationBulkCreate_write:
+      type: object
+      properties:
+        place:
+          type: string
+        type:
+          type: string
+          enum:
+          - email
+          - sms
+        survey:
+          type: string
+        sender:
+          type: string
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              recipient:
+                type: string
+              context:
+                type: object
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    Solicitation_read:
+      type: object
+      properties:
+        id:
+          type: string
+        date:
+          type: string
+          format: date-time
+        place:
+          type: object
+          properties:
+            id:
+              type: string
+            partner_id:
+              type: string
+            name:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    SolicitationCreate_write:
+      type: object
+      properties:
+        place:
+          type: string
+        type:
+          type: string
+          enum:
+          - email
+          - sms
+        survey:
+          type: string
+        sender:
+          type: string
+        recipient:
+          type: string
+        context:
+          type: object
+          additionalProperties:
+            type: string
+      additionalProperties:
+        type: string
+    SolicitationDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        date:
+          type: string
+          format: date-time
+        place:
+          type: object
+          properties:
+            id:
+              type: string
+            partner_id:
+              type: string
+            name:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        type:
+          type: string
+        sender:
+          type: string
+        recipient:
+          type: string
+        is_success:
+          type: string
+        status:
+          type: string
+        context:
+          type: string
+      additionalProperties:
+        type: string
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Personal access token supplied verbatim in the Authorization header (no Bearer prefix). Obtain from your Goodays account manager.

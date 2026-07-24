@@ -1,0 +1,1244 @@
+openapi: 3.0.0
+info:
+  title: Goodays core stats API
+  description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
+  version: v2
+servers:
+- url: https://api.goodays.co/v2
+security:
+- tokenAuth: []
+tags:
+- name: stats
+paths:
+  /stats/dissatisfaction:
+    get:
+      operationId: stats_dissatisfaction_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DissatisfactionMetric_read'
+      parameters:
+      - name: by
+        required: false
+        in: query
+        description: The field used to aggregate the metric.
+        schema:
+          type: string
+          enum:
+          - day
+          - month
+          - nps_category
+          - place
+          - quarter
+          - remark_type
+          - source
+          - survey
+          - year
+      - name: by_context
+        required: false
+        in: query
+        description: The key from the context used to aggregate the metric.
+        schema:
+          type: string
+      - name: by_level_category
+        required: false
+        in: query
+        description: The level category value used to aggregate the metric.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: places
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: levels
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: question
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: nps
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - detractor
+          - passive
+          - promoter
+      - name: remark_type
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - Idea
+          - Message
+          - NoType
+          - Praise
+          - Problem
+          - Question
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - api
+          - apple_app_store
+          - critizr
+          - email
+          - facebook
+          - facebook_messenger
+          - facebook_reviews
+          - google
+          - google_messaging
+          - google_play_store
+          - merci
+          - outbound_call
+          - pagesjaunes
+          - plv
+          - receipt
+          - sdk
+          - sms
+          - sms_conv
+          - sms_text
+          - sms_trans
+          - terminal
+          - tripadvisor
+          - uber_eats
+          - undefined
+          - whatsapp
+          - widget
+          - wifi
+      - name: begin
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+  /stats/google_score:
+    get:
+      operationId: stats_google_score_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/GoogleScoreMetric_read'
+      parameters:
+      - name: by
+        required: false
+        in: query
+        description: The field used to aggregate the metric.
+        schema:
+          type: string
+          enum:
+          - month
+          - place
+      - name: by_level_category
+        required: false
+        in: query
+        description: The level category value used to aggregate the metric.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: places
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: levels
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: begin
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: month
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+  /stats/nps:
+    get:
+      operationId: stats_nps_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NpsMetric_read'
+      parameters:
+      - name: by
+        required: false
+        in: query
+        description: The field used to aggregate the metric.
+        schema:
+          type: string
+          enum:
+          - day
+          - month
+          - nps_category
+          - place
+          - quarter
+          - remark_type
+          - source
+          - survey
+          - year
+      - name: by_context
+        required: false
+        in: query
+        description: The key from the context used to aggregate the metric.
+        schema:
+          type: string
+      - name: by_level_category
+        required: false
+        in: query
+        description: The level category value used to aggregate the metric.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: places
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: levels
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: question
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: nps
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - detractor
+          - passive
+          - promoter
+      - name: remark_type
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - Idea
+          - Message
+          - NoType
+          - Praise
+          - Problem
+          - Question
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - api
+          - apple_app_store
+          - critizr
+          - email
+          - facebook
+          - facebook_messenger
+          - facebook_reviews
+          - google
+          - google_messaging
+          - google_play_store
+          - merci
+          - outbound_call
+          - pagesjaunes
+          - plv
+          - receipt
+          - sdk
+          - sms
+          - sms_conv
+          - sms_text
+          - sms_trans
+          - terminal
+          - tripadvisor
+          - uber_eats
+          - undefined
+          - whatsapp
+          - widget
+          - wifi
+      - name: begin
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+  /stats/relationship:
+    get:
+      operationId: stats_relationship_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RelationshipMetric_read'
+      parameters:
+      - name: by
+        required: false
+        in: query
+        description: The field used to aggregate the metric.
+        schema:
+          type: string
+          enum:
+          - month
+          - place
+      - name: by_level_category
+        required: false
+        in: query
+        description: The level category value used to aggregate the metric.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: places
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: levels
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: begin
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: month
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+  /stats/remarks:
+    get:
+      operationId: stats_remarks_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RemarksMetric_read'
+      parameters:
+      - name: by
+        required: false
+        in: query
+        description: The field used to aggregate the metric.
+        schema:
+          type: string
+          enum:
+          - day
+          - month
+          - nps_category
+          - place
+          - quarter
+          - remark_type
+          - source
+          - survey
+          - year
+      - name: by_context
+        required: false
+        in: query
+        description: The key from the context used to aggregate the metric.
+        schema:
+          type: string
+      - name: by_level_category
+        required: false
+        in: query
+        description: The level category value used to aggregate the metric.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: places
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: levels
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: question
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: nps
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - detractor
+          - passive
+          - promoter
+      - name: remark_type
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - Idea
+          - Message
+          - NoType
+          - Praise
+          - Problem
+          - Question
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - api
+          - apple_app_store
+          - critizr
+          - email
+          - facebook
+          - facebook_messenger
+          - facebook_reviews
+          - google
+          - google_messaging
+          - google_play_store
+          - merci
+          - outbound_call
+          - pagesjaunes
+          - plv
+          - receipt
+          - sdk
+          - sms
+          - sms_conv
+          - sms_text
+          - sms_trans
+          - terminal
+          - tripadvisor
+          - uber_eats
+          - undefined
+          - whatsapp
+          - widget
+          - wifi
+      - name: begin
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+  /stats/retained_customers:
+    get:
+      operationId: stats_retained_customers_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RetainedCustomersMetric_read'
+      parameters:
+      - name: by
+        required: false
+        in: query
+        description: The field used to aggregate the metric.
+        schema:
+          type: string
+          enum:
+          - day
+          - month
+          - nps_category
+          - place
+          - quarter
+          - remark_type
+          - source
+          - survey
+          - year
+      - name: by_context
+        required: false
+        in: query
+        description: The key from the context used to aggregate the metric.
+        schema:
+          type: string
+      - name: by_level_category
+        required: false
+        in: query
+        description: The level category value used to aggregate the metric.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: places
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: levels
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: question
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: nps
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - detractor
+          - passive
+          - promoter
+      - name: remark_type
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - Idea
+          - Message
+          - NoType
+          - Praise
+          - Problem
+          - Question
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - api
+          - apple_app_store
+          - critizr
+          - email
+          - facebook
+          - facebook_messenger
+          - facebook_reviews
+          - google
+          - google_messaging
+          - google_play_store
+          - merci
+          - outbound_call
+          - pagesjaunes
+          - plv
+          - receipt
+          - sdk
+          - sms
+          - sms_conv
+          - sms_text
+          - sms_trans
+          - terminal
+          - tripadvisor
+          - uber_eats
+          - undefined
+          - whatsapp
+          - widget
+          - wifi
+      - name: begin
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+  /stats/satisfaction:
+    get:
+      operationId: stats_satisfaction_list
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SatisfactionMetric_read'
+      parameters:
+      - name: by
+        required: false
+        in: query
+        description: The field used to aggregate the metric.
+        schema:
+          type: string
+          enum:
+          - day
+          - month
+          - nps_category
+          - place
+          - quarter
+          - remark_type
+          - source
+          - survey
+          - year
+      - name: by_context
+        required: false
+        in: query
+        description: The key from the context used to aggregate the metric.
+        schema:
+          type: string
+      - name: by_level_category
+        required: false
+        in: query
+        description: The level category value used to aggregate the metric.
+        schema:
+          type: string
+      - name: place
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: places
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: level
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: levels
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: question
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: survey
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: nps
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - detractor
+          - passive
+          - promoter
+      - name: remark_type
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - Idea
+          - Message
+          - NoType
+          - Praise
+          - Problem
+          - Question
+      - name: source
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+          enum:
+          - api
+          - apple_app_store
+          - critizr
+          - email
+          - facebook
+          - facebook_messenger
+          - facebook_reviews
+          - google
+          - google_messaging
+          - google_play_store
+          - merci
+          - outbound_call
+          - pagesjaunes
+          - plv
+          - receipt
+          - sdk
+          - sms
+          - sms_conv
+          - sms_text
+          - sms_trans
+          - terminal
+          - tripadvisor
+          - uber_eats
+          - undefined
+          - whatsapp
+          - widget
+          - wifi
+      - name: begin
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      - name: end
+        required: false
+        in: query
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+  /stats/surveys/{id}:
+    get:
+      operationId: stats_surveys_read
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/SurveyMetricDetail_read'
+      parameters:
+      - name: id
+        required: true
+        in: path
+        description: ''
+        schema:
+          type: string
+      tags:
+      - stats
+components:
+  schemas:
+    GoogleScoreMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              public_rating:
+                type: number
+              public_rating_count:
+                type: integer
+              places_count:
+                type: integer
+              monthly_rating:
+                type: number
+              monthly_rating_count:
+                type: integer
+              action_phone_count:
+                type: integer
+              action_website_count:
+                type: integer
+              itinerary_count:
+                type: integer
+              views_count:
+                type: integer
+              rating_distribution:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    value:
+                      type: integer
+                    count:
+                      type: integer
+                  additionalProperties:
+                    type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    RetainedCustomersMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              retained_customers_count:
+                type: integer
+              retained_customers_percentage:
+                type: number
+              customers_responding_count:
+                type: integer
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    RelationshipMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              reply_rate:
+                type: number
+              reply_time:
+                type: integer
+              reply_quality:
+                type: number
+              customer_service_rating:
+                type: number
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    SurveyMetricDetail_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              count:
+                type: integer
+              average:
+                type: number
+              answers:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    count:
+                      type: integer
+                    percentage:
+                      type: number
+                    value:
+                      type: string
+                  additionalProperties:
+                    type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    SatisfactionMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              average:
+                type: number
+              ratings_count:
+                type: integer
+              responses_count:
+                type: integer
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    RemarksMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              count:
+                type: integer
+              Idea:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              Message:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              Praise:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              Problem:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              Question:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    DissatisfactionMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              count:
+                type: integer
+              percentage:
+                type: number
+              pending:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              spam:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              ignored:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              call:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              text:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    NpsMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              count:
+                type: integer
+              score:
+                type: integer
+              detractor:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              passive:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              promoter:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+  securitySchemes:
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Personal access token supplied verbatim in the Authorization header (no Bearer prefix). Obtain from your Goodays account manager.
