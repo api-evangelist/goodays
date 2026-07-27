@@ -1,0 +1,26 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Goodays API
+  version: 1.0.0
+extends: openapi/goodays-openapi-original.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-source: Reconstructed by API Evangelist from per-endpoint OpenAPI fragments published on the Goodays ReadMe docs (apidocs.goodays.co/reference/*.md).
+      x-apievangelist-provider: goodays
+      x-apievangelist-rebrand: Formerly Critizr; api.critizr.com/v2 now resolves to api.goodays.co/v2.
+      contact:
+        name: Goodays API Platform
+        url: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  - target: $.info
+    update:
+      x-apievangelist-products:
+        - Core API (places, levels, surveys, users, universes)
+        - Response API (customer reviews: reply/close/spam/call/message)
+        - Solicitation API (email/SMS feedback requests)
+        - Metrics/Stats API (NPS, satisfaction, relationship, Google score, dissatisfaction, remarks, retained customers)
+        - Collect API (become a collection source)
+        - Dashboard API (inbox)
+  - target: $.components.securitySchemes.tokenAuth
+    update:
+      x-apievangelist-note: Personal access token supplied verbatim in the Authorization header (no Bearer prefix); obtained from a Goodays account manager.

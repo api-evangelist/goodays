@@ -1,0 +1,29 @@
+{
+  "provider": "goodays",
+  "sources": [
+    "goodays-core-api-openapi.yml",
+    "goodays-dashboard-api-openapi.yml",
+    "goodays-events-api-openapi.yml",
+    "goodays-response-api-openapi.yml",
+    "goodays-session-api-openapi.yml",
+    "goodays-solicitation-api-openapi.yml",
+    "goodays-stats-api-openapi.yml"
+  ],
+  "outputs": [
+    "goodays-core-api-openapi.yml",
+    "goodays-dashboard-api-openapi.yml",
+    "goodays-events-api-openapi.yml",
+    "goodays-response-api-openapi.yml",
+    "goodays-session-api-openapi.yml",
+    "goodays-solicitation-api-openapi.yml",
+    "goodays-stats-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [
+    "goodays-response-api-openapi.yml: dangling $ref: #/components/requestBodies/levels_responses_collectData",
+    "goodays-response-api-openapi.yml: dangling $ref: #/components/requestBodies/responses_closeData"
+  ],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

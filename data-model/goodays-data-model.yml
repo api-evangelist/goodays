@@ -1,0 +1,99 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/goodays-openapi-original.json
+summary: >-
+  Entity-relationship graph for the Goodays API v2, derived from the OpenAPI
+  path structure and nested resource routes. The domain models a customer-
+  experience hierarchy (universes -> levels -> places), the surveys deployed to
+  places, the users who operate them, the customer reviews (responses) collected,
+  the solicitations sent to gather feedback, and the aggregate statistics.
+entities:
+  - name: Universe
+    path: /universes
+    schema: Universe_read
+    description: Top-level grouping of the account's organizational hierarchy.
+  - name: Level
+    path: /levels
+    schema: Level_read
+    description: A node in the organizational hierarchy (e.g. region, brand, zone) grouping places.
+  - name: Place
+    path: /places
+    schema: Place_read
+    description: A point of sale / physical location where customer experience is measured.
+  - name: Survey
+    path: /surveys
+    schema: Survey_read
+    description: A questionnaire deployed to one or more places to collect feedback.
+  - name: User
+    path: /users
+    schema: UserProfile_read
+    description: An operator/account user attached to one or more places.
+  - name: Response
+    path: /responses
+    schema: Response_read
+    description: A customer review/feedback participation, with reply/close/spam/call/message actions.
+  - name: Solicitation
+    path: /solicitations
+    schema: Solicitation_read
+    description: An outbound email/SMS request asking a customer for feedback.
+  - name: Event
+    path: /events
+    schema: Event_read
+    description: A configured notification event with sample message/reply/response/delegated previews.
+  - name: Dashboard
+    path: /dashboard
+    schema: Dashboard_read
+    description: Inbox / dashboard view over responses.
+  - name: Configuration
+    path: /configuration
+    schema: Configuration_read
+    description: Account-level configuration.
+  - name: Session
+    path: /session
+    schema: Session_read
+    description: The authenticated session identity.
+  - name: Stats
+    path: /stats/*
+    schema: [NpsMetric_read, SatisfactionMetric_read, RelationshipMetric_read, GoogleScoreMetric_read, DissatisfactionMetric_read, RemarksMetric_read, RetainedCustomersMetric_read]
+    description: Aggregate metrics (NPS, satisfaction, relationship, Google score, dissatisfaction, remarks, retained customers).
+relationships:
+  - from: Level
+    to: Place
+    kind: has_many
+    via: /levels/{level_pk}/places
+  - from: Place
+    to: Level
+    kind: has_many
+    via: /places/{place_pk}/levels
+  - from: Place
+    to: Survey
+    kind: has_many
+    via: /places/{place_pk}/surveys
+  - from: Place
+    to: User
+    kind: has_many
+    via: /places/{place_pk}/users
+  - from: Place
+    to: Response
+    kind: has_many
+    via: /places/{place_pk}/responses
+  - from: Level
+    to: Response
+    kind: has_many
+    via: /levels/{level_pk}/responses
+  - from: Survey
+    to: Response
+    kind: has_many
+    via: /surveys/{survey_pk}/responses
+  - from: Survey
+    to: Place
+    kind: has_many
+    via: /surveys/{survey_pk}/places
+  - from: User
+    to: Place
+    kind: has_many
+    via: /users/{user_pk}/places
+  - from: Survey
+    to: Stats
+    kind: has_one
+    via: /stats/surveys/{id}

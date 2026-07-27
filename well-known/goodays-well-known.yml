@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+host: https://api.goodays.co
+note: >-
+  Probed the standard /.well-known/ discovery surface on the Goodays API and
+  website hosts. No documents were served (all 404); recorded for auditability.
+  Absence is valid, expected data.
+documents:
+  - path: /.well-known/security.txt
+    host: https://api.goodays.co
+    status: 404
+  - path: /.well-known/security.txt
+    host: https://goodays.co
+    status: 404
+  - path: /.well-known/openid-configuration
+    host: https://api.goodays.co
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    host: https://api.goodays.co
+    status: 404
+  - path: /.well-known/api-catalog
+    host: https://api.goodays.co
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    host: https://api.goodays.co
+    status: 404

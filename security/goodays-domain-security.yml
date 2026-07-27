@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: goodays.co
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 10 23:59:59 2026 GMT
+  hsts: false
+- host: apidocs.goodays.co
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  4 13:27:15 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.goodays.co
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  9 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: goodays.co
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

@@ -1,25 +1,194 @@
 aid: goodays
 name: Goodays
-description: Goodays is a company surfaced as a portfolio company of point-nine and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Goodays (formerly Critizr) is Europe's leading customer experience management
+  platform, founded in 2012 and headquartered in Lille, France, helping retailers
+  and multi-location brands understand and act on customer feedback across every
+  point of sale. Its REST API v2 (api.goodays.co/v2) exposes a Core API for the
+  place/level/survey/user hierarchy, a Response API to read and reply to customer
+  reviews, a Solicitation API to request feedback by email/SMS, a Collect API for
+  first-party collection sources, and a Metrics API for NPS, satisfaction,
+  relationship, Google-score, dissatisfaction and retained-customer statistics.
+  Goodays also ships Web, iOS and Android SDKs and embeddable feedback widgets.
+  Added to the API Evangelist network as a point-nine portfolio lead and enriched
+  by the pipeline from Goodays' public developer documentation.
 url: https://raw.githubusercontent.com/api-evangelist/goodays/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - point-nine
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: portfolio-lead-enriched
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://assets.goodays.prod.verveagency.com/assets/illu-social-en.png
 tags:
 - Company
-apis: []
+- Customer Experience
+- Customer Feedback
+- Voice of the Customer
+- Surveys
+- NPS
+- Reviews
+- Retail
+- CRM
+- SaaS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: goodays:goodays-core-api
+  name: Goodays core API
+  description: The core API from Goodays — 22 operation(s) for core.
+  humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  baseURL: https://api.goodays.co/v2
+  tags:
+  - core
+  properties:
+  - type: OpenAPI
+    url: openapi/goodays-core-api-openapi.yml
+  - type: APIReference
+    url: https://apidocs.goodays.co/reference/places_list
+- aid: goodays:goodays-dashboard-api
+  name: Goodays dashboard API
+  description: The dashboard API from Goodays — 1 operation(s) for dashboard.
+  humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  baseURL: https://api.goodays.co/v2
+  tags:
+  - dashboard
+  properties:
+  - type: OpenAPI
+    url: openapi/goodays-dashboard-api-openapi.yml
+  - type: APIReference
+    url: https://apidocs.goodays.co/reference/places_list
+- aid: goodays:goodays-events-api
+  name: Goodays events API
+  description: The events API from Goodays — 5 operation(s) for events.
+  humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  baseURL: https://api.goodays.co/v2
+  tags:
+  - events
+  properties:
+  - type: OpenAPI
+    url: openapi/goodays-events-api-openapi.yml
+  - type: APIReference
+    url: https://apidocs.goodays.co/reference/places_list
+- aid: goodays:goodays-response-api
+  name: Goodays response API
+  description: The response API from Goodays — 9 operation(s) for response.
+  humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  baseURL: https://api.goodays.co/v2
+  tags:
+  - response
+  properties:
+  - type: OpenAPI
+    url: openapi/goodays-response-api-openapi.yml
+  - type: APIReference
+    url: https://apidocs.goodays.co/reference/places_list
+- aid: goodays:goodays-session-api
+  name: Goodays session API
+  description: The session API from Goodays — 1 operation(s) for session.
+  humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  baseURL: https://api.goodays.co/v2
+  tags:
+  - session
+  properties:
+  - type: OpenAPI
+    url: openapi/goodays-session-api-openapi.yml
+  - type: APIReference
+    url: https://apidocs.goodays.co/reference/places_list
+- aid: goodays:goodays-solicitation-api
+  name: Goodays solicitation API
+  description: The solicitation API from Goodays — 3 operation(s) for solicitation.
+  humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  baseURL: https://api.goodays.co/v2
+  tags:
+  - solicitation
+  properties:
+  - type: OpenAPI
+    url: openapi/goodays-solicitation-api-openapi.yml
+  - type: APIReference
+    url: https://apidocs.goodays.co/reference/places_list
+- aid: goodays:goodays-stats-api
+  name: Goodays stats API
+  description: The stats API from Goodays — 8 operation(s) for stats.
+  humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+  baseURL: https://api.goodays.co/v2
+  tags:
+  - stats
+  properties:
+  - type: OpenAPI
+    url: openapi/goodays-stats-api-openapi.yml
+  - type: APIReference
+    url: https://apidocs.goodays.co/reference/places_list
 common:
+- type: DeveloperPortal
+  url: https://developers.goodays.co/docs/welcome-to-goodays-developer-platform
+- type: Documentation
+  url: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+- type: APIReference
+  url: https://apidocs.goodays.co/reference/places_list
+- type: GettingStarted
+  url: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+- type: Authentication
+  url: authentication/goodays-authentication.yml
+- type: Conventions
+  url: conventions/goodays-conventions.yml
+- type: DataModel
+  url: data-model/goodays-data-model.yml
+- type: Lifecycle
+  url: lifecycle/goodays-lifecycle.yml
+- type: MCPServer
+  url: mcp/goodays-mcp.yml
+- type: LLMsTxt
+  url: llms/goodays-llms.txt
+- type: Packages
+  url: packages/goodays-packages.yml
+- type: SDKs
+  url: packages/goodays-packages.yml
+- type: Components
+  url: components/goodays-components.yml
+- type: Conformance
+  url: conformance/goodays-conformance.yml
+- type: Compliance
+  url: https://community.goodays.co/privacy-policy
+- type: DomainSecurity
+  url: security/goodays-domain-security.yml
+- type: AgentSkill
+  url: skills/goodays-collect-feedback.md
+- type: AgentSkill
+  url: skills/goodays-respond-to-reviews.md
+- type: AgentSkill
+  url: skills/goodays-track-experience-metrics.md
+- type: Support
+  url: https://help.goodays.co/en
+- type: Blog
+  url: https://community.goodays.co/en/blog
+- type: GitHubOrganization
+  url: https://github.com/critizr
+- type: Login
+  url: https://app.goodays.co/
+- type: PrivacyPolicy
+  url: https://community.goodays.co/privacy-policy
 - type: Website
   url: https://goodays.co
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

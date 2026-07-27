@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/goodays-openapi-original.json
+docs: https://community.goodays.co/privacy-policy
+summary: >-
+  Cross-cutting standards posture for the Goodays API v2, derived from the
+  reconstructed OpenAPI plus the published Goodays privacy policy. Goodays is a
+  France/EU-based platform operating under GDPR.
+standards:
+  - id: rest
+    conforms: true
+    evidence: JSON over HTTPS with POST/PUT/PATCH/GET/DELETE and resource-oriented paths.
+  - id: openapi-3.0
+    conforms: true
+    evidence: Reference published as OpenAPI 3.0.0 fragments per endpoint.
+  - id: api-key-auth
+    conforms: true
+    evidence: Personal access token in the Authorization header (apiKey securityScheme).
+  - id: oauth2
+    conforms: false
+    evidence: No oauth2 securityScheme is declared.
+  - id: cursor-pagination
+    conforms: true
+    evidence: List endpoints expose cursor/page_size/sort query parameters.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json responses documented in the reference.
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      Goodays publishes a GDPR privacy policy (Regulation 2016/679) describing
+      lawful basis, processing, sharing and storage of personal data, and states
+      technical/organizational security measures including encryption, strict
+      access control and enhanced authentication.
+    source: https://community.goodays.co/privacy-policy

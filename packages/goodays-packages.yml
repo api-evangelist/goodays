@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/critizr
+note: >-
+  Goodays publishes first-party client-facing SDKs on its GitHub org (still under
+  the critizr name) plus a JavaScript Web SDK loaded from cdn.goodays.co. No
+  server-side language SDKs (npm/PyPI/Maven/etc.) were found published on the
+  public registries.
+packages:
+  - language: javascript
+    registry: cdn
+    name: Goodays Web SDK
+    url: https://developers.goodays.co/docs/web-sdk
+    install: <script src="https://cdn.goodays.co/sdk/<API_KEY>.js"></script>
+    global: cz
+    official: true
+    kind: web-widget-loader
+  - language: kotlin
+    registry: github
+    name: critizr-android-sdk
+    url: https://github.com/critizr/critizr-android-sdk
+    install: Add as a dependency from the critizr GitHub repository.
+    official: true
+    kind: mobile-sdk
+    description: Present a Goodays (Critizr) widget from any third-party Android app.
+  - language: swift
+    registry: github
+    name: critizr-ios-sdk
+    url: https://github.com/critizr/critizr-ios-sdk
+    install: Add via CocoaPods pod from the critizr-ios-pod / critizr-ios-swift-pod repositories.
+    official: true
+    kind: mobile-sdk
+    description: Present a Goodays (Critizr) widget from any third-party iOS app.
+  - language: objective-c
+    registry: github
+    name: critizr-ios-pod
+    url: https://github.com/critizr/critizr-ios-pod
+    official: true
+    kind: cocoapods-podspec

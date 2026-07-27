@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+docs: https://apidocs.goodays.co/docs/authentification
+summary: >-
+  Cross-cutting request/response conventions for the Goodays (formerly Critizr)
+  API v2, derived from the reconstructed OpenAPI and the Goodays API Platform
+  documentation. REST over HTTPS, token auth in the Authorization header,
+  cursor-based pagination, and URI-path versioning.
+base_url: https://api.goodays.co/v2/
+protocol: REST/JSON over HTTPS (POST, PUT, PATCH, GET, DELETE)
+authentication:
+  style: api-key
+  location: header
+  header: Authorization
+  format: personal access token supplied verbatim (no Bearer prefix)
+  note: Obtain the access token from your Goodays account manager; there is no self-serve developer account.
+  detail: authentication/goodays-authentication.yml
+pagination:
+  style: cursor
+  request_params:
+    - cursor      # opaque pagination cursor value
+    - page_size   # number of results per page
+    - sort        # field to order results by
+  note: List endpoints accept cursor/page_size/sort query parameters.
+versioning:
+  scheme: uri-path
+  current: v2
+  note: Every request is prefixed with /v2/. The Critizr-era host api.critizr.com/v2 now resolves to api.goodays.co/v2.
+  detail: lifecycle/goodays-lifecycle.yml
+idempotency:
+  supported: false
+  note: The published spec and docs do not document an idempotency-key header.
+error_envelope:
+  note: The reconstructed spec documents only 200/201 success responses; a structured error envelope is not published in the reference.
+rate_limiting:
+  documented: false
+bulk_operations:
+  note: Several resources expose /bulk variants (responses, solicitations, levels/places/surveys responses) for batch retrieval and creation.
+cross_links:
+  authentication: authentication/goodays-authentication.yml
+  lifecycle: lifecycle/goodays-lifecycle.yml
+  data_model: data-model/goodays-data-model.yml

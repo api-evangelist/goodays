@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: openapi/goodays-openapi-original.json
+note: >-
+  Goodays does not publish an official hosted MCP server. This is a candidate
+  tool surface derived one-tool-per-operation from the reconstructed Goodays
+  API v2 OpenAPI, as a starting point for an MCP wrapper.
+server:
+  name: goodays
+  transport: http
+tools:
+  - name: list_places
+    description: List points of sale (places).
+    source_operation: openapi/goodays-openapi-original.json#places_list
+  - name: get_place
+    description: Retrieve a single place by id.
+    source_operation: openapi/goodays-openapi-original.json#places_read
+  - name: list_levels
+    description: List organizational hierarchy levels.
+    source_operation: openapi/goodays-openapi-original.json#levels_list
+  - name: list_surveys
+    description: List surveys.
+    source_operation: openapi/goodays-openapi-original.json#surveys_list
+  - name: list_users
+    description: List account users.
+    source_operation: openapi/goodays-openapi-original.json#users_list
+  - name: list_responses
+    description: List customer reviews (responses).
+    source_operation: openapi/goodays-openapi-original.json#responses_list
+  - name: get_response
+    description: Retrieve a single customer review.
+    source_operation: openapi/goodays-openapi-original.json#responses_read
+  - name: reply_to_response
+    description: Reply to a customer review.
+    source_operation: openapi/goodays-openapi-original.json#responses_reply
+  - name: close_response
+    description: Close a customer review.
+    source_operation: openapi/goodays-openapi-original.json#responses_close
+  - name: mark_response_spam
+    description: Flag a customer review as spam.
+    source_operation: openapi/goodays-openapi-original.json#responses_spam
+  - name: collect_response
+    description: Submit a feedback participation as a collection source.
+    source_operation: openapi/goodays-openapi-original.json#responses_collect
+  - name: create_solicitation
+    description: Send a solicitation (email/SMS) asking a customer for feedback.
+    source_operation: openapi/goodays-openapi-original.json#solicitations_create
+  - name: list_solicitations
+    description: List sent solicitations.
+    source_operation: openapi/goodays-openapi-original.json#solicitations_list
+  - name: get_nps
+    description: Retrieve Net Promoter Score statistics.
+    source_operation: openapi/goodays-openapi-original.json#stats_nps_list
+  - name: get_satisfaction
+    description: Retrieve customer satisfaction statistics.
+    source_operation: openapi/goodays-openapi-original.json#stats_satisfaction_list

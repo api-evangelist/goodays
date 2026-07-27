@@ -1,0 +1,13 @@
+generated: '2026-07-19'
+method: generated
+api: openapi/goodays-openapi-original.json
+skills:
+  - file: goodays-collect-feedback.md
+    name: Collect customer feedback into Goodays
+    operations: [places_list, solicitations_create, solicitations_read, responses_collect]
+  - file: goodays-respond-to-reviews.md
+    name: Respond to customer reviews in Goodays
+    operations: [places_responses_list, responses_read, responses_reply, responses_close, responses_message, responses_call, responses_spam]
+  - file: goodays-track-experience-metrics.md
+    name: Track customer-experience metrics in Goodays
+    operations: [stats_nps_list, stats_satisfaction_list, stats_relationship_list, stats_google_score_list, stats_dissatisfaction_list, stats_remarks_list, stats_retained_customers_list, stats_surveys_read]

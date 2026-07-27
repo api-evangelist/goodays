@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+summary: >-
+  Versioning and lifecycle posture for the Goodays API v2. Goodays versions via
+  the URI path (/v2/). The Critizr-to-Goodays rebrand redirected the legacy host
+  api.critizr.com/v2 to api.goodays.co/v2 without a version bump.
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
+rebrand:
+  from: Critizr (api.critizr.com/v2)
+  to: Goodays (api.goodays.co/v2)
+  docs: https://apidocs.goodays.co/docs/from-critizr-to-goodays
+deprecation:
+  policy_documented: false
+  note: No formal deprecation/Sunset-header policy is published.
+status_page:
+  found: false
+  note: No public status page was found (status.goodays.co did not resolve).
+changelog:
+  found: false
+  note: The ReadMe changelog at apidocs.goodays.co/changelog exists but is empty ("No Changelogs").
+deprecated_operations: []

@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.goodays.co/docs/web-sdk
+docs: https://developers.goodays.co/docs/welcome-to-goodays-developer-platform
+summary: >-
+  Goodays ships a client-side Web SDK plus a family of embeddable widgets that
+  merchants drop into their websites, mobile apps, kiosks and WiFi portals to
+  collect and display customer feedback. Loaded from cdn.goodays.co and exposed
+  through the global `cz` namespace; declarative widgets are wired via <a> tags
+  with the class `goodays-widget` and data attributes, or launched imperatively.
+loader:
+  script: <script src="https://cdn.goodays.co/sdk/<API_KEY>.js"></script>
+  global: cz
+  imperative_api: GoodaysSDK.open(widgetType, posId, params)
+  declarative: <a class="goodays-widget" data-type="..." data-params="...">
+families:
+  - name: Collect widgets
+    description: Widgets that gather customer feedback.
+    components:
+      - Web button "Send Feedback" (opens the Store Locator interface)
+      - Satisfaction question (inline satisfaction question on a web page)
+      - Web link "Open pop-in" (opens any Goodays interface as a pop-in via an <a> tag)
+      - Tablet mode (present the survey on a tablet or in-store kiosk)
+      - Public WiFi / WiFi hotspot integration
+  - name: Showcase / valorization widgets
+    description: Widgets that display feedback and scores on a merchant site.
+    components:
+      - Customer Relationship score display (global or per point of sale)
+      - Customer Satisfaction score display (per place or global)
+      - Latest comment display (latest dialog between a point of sale and a customer)
+  - name: Mobile SDK widgets
+    description: Native widgets presented from iOS and Android apps.
+    components:
+      - critizr-ios-sdk widget
+      - critizr-android-sdk widget
+sdk_events:
+  documented: true
+  docs: https://developers.goodays.co/docs/subscribe-to-sdk-events
+  note: Developers can subscribe to specific SDK events.
