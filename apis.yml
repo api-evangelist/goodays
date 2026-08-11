@@ -137,6 +137,8 @@ apis:
   - type: APIReference
     url: https://apidocs.goodays.co/reference/places_list
 common:
+- type: Overlay
+  url: overlays/goodays-openapi-overlay.yaml
 - type: DeveloperPortal
   url: https://developers.goodays.co/docs/welcome-to-goodays-developer-platform
 - type: Documentation
