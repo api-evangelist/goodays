@@ -1,0 +1,127 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodays core solicitation API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "solicitation",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "solicitations_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/solicitations",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "recipient",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "partner_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "is_success",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "solicitations_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.goodays.co/v2/solicitations",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "solicitations_bulk",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.goodays.co/v2/solicitations/bulk",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "solicitations_read",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/solicitations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying this push transaction."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

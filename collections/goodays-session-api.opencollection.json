@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodays core session API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "session",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "session_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/session"
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

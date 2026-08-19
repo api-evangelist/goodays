@@ -1,0 +1,488 @@
+{
+  "item": [
+    {
+      "id": "09643748-4640-48fe-af77-70154d211b68",
+      "name": "solicitation",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "43335dcf-8cab-4297-a5b9-b2bb12be1031",
+          "name": "solicitations create",
+          "request": {
+            "name": "solicitations create",
+            "description": {},
+            "url": {
+              "path": [
+                "solicitations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"place\": \"<string>\",\n  \"type\": \"<string>\",\n  \"survey\": \"<string>\",\n  \"sender\": \"<string>\",\n  \"recipient\": \"<string>\",\n  \"context\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3cd589b0-aaf0-478c-b622-819ea4766a2d",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "solicitations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"place\": \"<string>\",\n  \"type\": \"<string>\",\n  \"survey\": \"<string>\",\n  \"sender\": \"<string>\",\n  \"recipient\": \"<string>\",\n  \"context\": {}\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"place\": \"string\",\n  \"type\": \"email\",\n  \"survey\": \"string\",\n  \"sender\": \"string\",\n  \"recipient\": \"string\",\n  \"context\": {\n    \"key_0\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5f9f19bb-182b-4eff-aa1c-21ef6696d55d",
+          "name": "solicitations list",
+          "request": {
+            "name": "solicitations list",
+            "description": {},
+            "url": {
+              "path": [
+                "solicitations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "recipient",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "partner_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "is_success",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b5af526-6529-42e4-96db-dec913448770",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "solicitations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recipient",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "partner_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "is_success",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"date\": \"1989-01-05T04:50:41.440Z\",\n    \"place\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\"\n    },\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"date\": \"1979-01-08T20:42:50.245Z\",\n    \"place\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "338ce235-fca7-4432-89a5-db761fb7ed28",
+          "name": "solicitations bulk",
+          "request": {
+            "name": "solicitations bulk",
+            "description": {},
+            "url": {
+              "path": [
+                "solicitations",
+                "bulk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"place\": \"<string>\",\n  \"type\": \"<string>\",\n  \"survey\": \"<string>\",\n  \"sender\": \"<string>\",\n  \"data\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "36d5dedf-5dd5-4405-9683-ac759958e0c6",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "solicitations",
+                    "bulk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"place\": \"<string>\",\n  \"type\": \"<string>\",\n  \"survey\": \"<string>\",\n  \"sender\": \"<string>\",\n  \"data\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"place\": \"string\",\n  \"type\": \"email\",\n  \"survey\": \"string\",\n  \"sender\": \"string\",\n  \"data\": [\n    {\n      \"recipient\": \"string\",\n      \"context\": {\n        \"key_0\": \"string\"\n      },\n      \"key_0\": \"string\"\n    },\n    {\n      \"recipient\": \"string\",\n      \"context\": {\n        \"key_0\": \"string\"\n      }\n    }\n  ],\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "12b1d762-9ee7-42a4-a614-d9636dd321c6",
+          "name": "solicitations read",
+          "request": {
+            "name": "solicitations read",
+            "description": {},
+            "url": {
+              "path": [
+                "solicitations",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) A unique value identifying this push transaction."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ed19a6d8-ded5-4de6-a969-62839736bedb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "solicitations",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) A unique value identifying this push transaction."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"date\": \"1984-01-03T01:52:45.910Z\",\n  \"place\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"type\": \"string\",\n  \"sender\": \"string\",\n  \"recipient\": \"string\",\n  \"is_success\": \"string\",\n  \"status\": \"string\",\n  \"context\": \"string\",\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.goodays.co/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "9d1983f3-bea0-4ea6-a30d-5249393e284f",
+    "name": "Goodays core solicitation API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.",
+      "type": "text/plain"
+    }
+  }
+}

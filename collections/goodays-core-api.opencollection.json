@@ -1,0 +1,920 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodays core API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "core",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "configuration_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/configuration"
+          }
+        },
+        {
+          "info": {
+            "name": "levels_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/levels",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "category_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "levels_read",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/levels/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying this brand level."
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "levels_places_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/levels/:level_pk/places",
+            "params": [
+              {
+                "name": "level_pk",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying the parent level."
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "partner_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "levels_responses_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/levels/:level_pk/responses",
+            "params": [
+              {
+                "name": "level_pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date_field",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "last_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "crm_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_answers",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_message",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_reply",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "levels_responses_bulk",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/levels/:level_pk/responses/bulk",
+            "params": [
+              {
+                "name": "level_pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "places_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/places",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "partner_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "places_read",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/places/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying this place."
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "places_levels_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/places/:place_pk/levels",
+            "params": [
+              {
+                "name": "place_pk",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying the parent place."
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "category_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "places_responses_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/places/:place_pk/responses",
+            "params": [
+              {
+                "name": "place_pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date_field",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "last_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "crm_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_answers",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_message",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_reply",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "places_responses_bulk",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/places/:place_pk/responses/bulk",
+            "params": [
+              {
+                "name": "place_pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "places_surveys_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/places/:place_pk/surveys",
+            "params": [
+              {
+                "name": "place_pk",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying the parent place."
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "places_users_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/places/:place_pk/users",
+            "params": [
+              {
+                "name": "place_pk",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying the parent place."
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "last_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phone",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "surveys_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/surveys",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "slug",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "surveys_read",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/surveys/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying this rating question tag."
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "surveys_places_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/surveys/:survey_pk/places",
+            "params": [
+              {
+                "name": "survey_pk",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying the parent survey."
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "partner_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "surveys_responses_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/surveys/:survey_pk/responses",
+            "params": [
+              {
+                "name": "survey_pk",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date_field",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "last_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "crm_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_answers",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_message",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_reply",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "surveys_responses_bulk",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/surveys/:survey_pk/responses/bulk",
+            "params": [
+              {
+                "name": "survey_pk",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "universes_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/universes",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "users_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/users",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "last_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phone",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "users_read",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/users/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying this user profile."
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "users_places_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/users/:user_pk/places",
+            "params": [
+              {
+                "name": "user_pk",
+                "value": "",
+                "type": "path",
+                "description": "A unique value identifying the parent user."
+              },
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "partner_id",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,270 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodays core response API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "response",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "responses_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/responses",
+            "params": [
+              {
+                "name": "cursor",
+                "value": "",
+                "type": "query",
+                "description": "The pagination cursor value."
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return per page."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "date_field",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "first_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "last_name",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "phone",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "crm_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_answers",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_message",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "has_reply",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "responses_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.goodays.co/v2/responses"
+          }
+        },
+        {
+          "info": {
+            "name": "responses_bulk",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/responses/bulk"
+          }
+        },
+        {
+          "info": {
+            "name": "responses_collect",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.goodays.co/v2/responses/collect"
+          }
+        },
+        {
+          "info": {
+            "name": "responses_read",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/responses/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "responses_call",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.goodays.co/v2/responses/:id/call",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "responses_close",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.goodays.co/v2/responses/:id/close",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "responses_message",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.goodays.co/v2/responses/:id/message",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "responses_reply",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.goodays.co/v2/responses/:id/reply",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "responses_spam",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.goodays.co/v2/responses/:id/spam",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

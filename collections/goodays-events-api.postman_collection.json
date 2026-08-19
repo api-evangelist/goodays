@@ -1,0 +1,504 @@
+{
+  "item": [
+    {
+      "id": "ce37d554-9c90-4a53-a569-a530bb6ec8af",
+      "name": "events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6c893738-39aa-4dd2-ae5c-85ada0005409",
+          "name": "events list",
+          "request": {
+            "name": "events list",
+            "description": {},
+            "url": {
+              "path": [
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a80dbd1c-993c-47a6-9ea5-f151c9cf64d6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"samples\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  {\n    \"samples\": \"string\",\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8934085-8634-42aa-87db-31a2db7ee3b8",
+          "name": "events sample delegated",
+          "request": {
+            "name": "events sample delegated",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":id",
+                "sample_delegated"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4c75ffbc-b138-4a80-be95-a7ff89ae840f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":id",
+                    "sample_delegated"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"event_type\": \"string\",\n  \"response\": {\n    \"id\": \"string\",\n    \"token\": \"string\",\n    \"created_date\": \"1963-05-21T00:06:00.513Z\",\n    \"updated_date\": \"2016-05-11T02:26:13.728Z\",\n    \"source\": \"pagesjaunes\",\n    \"survey\": {\n      \"id\": \"string\",\n      \"slug\": \"string\",\n      \"label\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\",\n      \"key_0\": \"string\"\n    },\n    \"answers\": [\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"emoji\",\n          \"enabled\": true\n        },\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"emoji\",\n          \"enabled\": true\n        },\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      }\n    ],\n    \"message\": {\n      \"id\": \"string\",\n      \"created_date\": \"1962-02-12T17:21:52.263Z\",\n      \"type\": \"Message\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      },\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"reply\": {\n      \"id\": \"string\",\n      \"created_date\": \"1992-08-12T13:36:55.971Z\",\n      \"type\": \"text\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"user\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"opt_in\": {\n        \"newsletter\": false,\n        \"email\": false,\n        \"sms\": false\n      }\n    },\n    \"context\": \"string\",\n    \"place\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": true,\n      \"detail_url\": \"string\"\n    },\n    \"delegated_to\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": true,\n      \"detail_url\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\",\n      \"key_2\": \"string\"\n    },\n    \"attached_messages\": [\n      {\n        \"id\": \"string\",\n        \"created_date\": \"2012-11-22T03:49:06.073Z\",\n        \"type\": \"Praise\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"created_date\": \"1953-06-29T03:41:37.324Z\",\n        \"type\": \"Problem\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      }\n    ],\n    \"state\": \"closed\",\n    \"thread\": \"string\",\n    \"actions\": {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"alert_triggered\": false\n  },\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ca738e91-db0d-4ebc-a8a3-c1372bc87046",
+          "name": "events sample message",
+          "request": {
+            "name": "events sample message",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":id",
+                "sample_message"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fd732654-700b-4e52-9b1a-cc653bed7c57",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":id",
+                    "sample_message"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"event_type\": \"string\",\n  \"response\": {\n    \"id\": \"string\",\n    \"token\": \"string\",\n    \"created_date\": \"1973-06-25T15:19:11.693Z\",\n    \"updated_date\": \"2018-11-28T16:34:16.062Z\",\n    \"source\": \"sdk\",\n    \"survey\": {\n      \"id\": \"string\",\n      \"slug\": \"string\",\n      \"label\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\"\n    },\n    \"answers\": [\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"yesno\",\n          \"enabled\": true,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"emoji\",\n          \"enabled\": false\n        }\n      }\n    ],\n    \"message\": {\n      \"id\": \"string\",\n      \"created_date\": \"1975-01-16T20:49:38.443Z\",\n      \"type\": \"Problem\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      },\n      \"key_0\": \"string\"\n    },\n    \"reply\": {\n      \"id\": \"string\",\n      \"created_date\": \"1967-07-13T20:55:40.141Z\",\n      \"type\": \"call\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    \"user\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"opt_in\": {\n        \"newsletter\": true,\n        \"email\": true,\n        \"sms\": true,\n        \"key_0\": \"string\"\n      },\n      \"key_0\": \"string\"\n    },\n    \"context\": \"string\",\n    \"place\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"delegated_to\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": true,\n      \"detail_url\": \"string\"\n    },\n    \"attached_messages\": [\n      {\n        \"id\": \"string\",\n        \"created_date\": \"1948-04-13T10:26:49.490Z\",\n        \"type\": \"Idea\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"created_date\": \"1957-02-26T05:22:47.711Z\",\n        \"type\": \"Idea\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      }\n    ],\n    \"state\": \"open\",\n    \"thread\": \"string\",\n    \"actions\": {\n      \"key_0\": \"string\"\n    },\n    \"alert_triggered\": true\n  },\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1956-01-21T07:03:00.698Z\",\n    \"type\": \"Praise\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"key_0\": \"string\"\n  },\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8fef8152-2b2d-43f5-a93a-e40a3379f7d2",
+          "name": "events sample reply",
+          "request": {
+            "name": "events sample reply",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":id",
+                "sample_reply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f3820bae-9473-43d6-9b40-0a9782a95296",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":id",
+                    "sample_reply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"event_type\": \"string\",\n  \"response\": {\n    \"id\": \"string\",\n    \"token\": \"string\",\n    \"created_date\": \"1967-10-29T15:56:48.814Z\",\n    \"updated_date\": \"2010-03-18T16:30:12.304Z\",\n    \"source\": \"terminal\",\n    \"survey\": {\n      \"id\": \"string\",\n      \"slug\": \"string\",\n      \"label\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\",\n      \"key_0\": \"string\"\n    },\n    \"answers\": [\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"text\",\n          \"enabled\": false\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"text\",\n          \"enabled\": false,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        }\n      }\n    ],\n    \"message\": {\n      \"id\": \"string\",\n      \"created_date\": \"2004-05-30T23:10:24.242Z\",\n      \"type\": \"Praise\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    \"reply\": {\n      \"id\": \"string\",\n      \"created_date\": \"2004-10-08T16:52:03.344Z\",\n      \"type\": \"text\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    \"user\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"opt_in\": {\n        \"newsletter\": true,\n        \"email\": false,\n        \"sms\": true\n      }\n    },\n    \"context\": \"string\",\n    \"place\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\"\n    },\n    \"delegated_to\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": true,\n      \"detail_url\": \"string\"\n    },\n    \"attached_messages\": [\n      {\n        \"id\": \"string\",\n        \"created_date\": \"1975-06-19T17:12:36.958Z\",\n        \"type\": \"Message\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"created_date\": \"2007-12-29T03:16:51.122Z\",\n        \"type\": \"Idea\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      }\n    ],\n    \"state\": \"open\",\n    \"thread\": \"string\",\n    \"actions\": {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"alert_triggered\": true\n  },\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a06023f9-cbb4-49e1-ba1b-4d69ad8a8664",
+          "name": "events sample response",
+          "request": {
+            "name": "events sample response",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":id",
+                "sample_response"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ee3f9d0f-82c4-4675-bd30-632821bac775",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":id",
+                    "sample_response"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"event_type\": \"string\",\n  \"response\": {\n    \"id\": \"string\",\n    \"token\": \"string\",\n    \"created_date\": \"1967-10-29T15:56:48.814Z\",\n    \"updated_date\": \"2010-03-18T16:30:12.304Z\",\n    \"source\": \"terminal\",\n    \"survey\": {\n      \"id\": \"string\",\n      \"slug\": \"string\",\n      \"label\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\",\n      \"key_0\": \"string\"\n    },\n    \"answers\": [\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"text\",\n          \"enabled\": false\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"value\": \"string\",\n        \"question\": {\n          \"id\": \"string\",\n          \"title\": \"string\",\n          \"type\": \"text\",\n          \"enabled\": false,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        }\n      }\n    ],\n    \"message\": {\n      \"id\": \"string\",\n      \"created_date\": \"2004-05-30T23:10:24.242Z\",\n      \"type\": \"Praise\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    \"reply\": {\n      \"id\": \"string\",\n      \"created_date\": \"2004-10-08T16:52:03.344Z\",\n      \"type\": \"text\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    \"user\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"opt_in\": {\n        \"newsletter\": true,\n        \"email\": false,\n        \"sms\": true\n      }\n    },\n    \"context\": \"string\",\n    \"place\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": false,\n      \"detail_url\": \"string\"\n    },\n    \"delegated_to\": {\n      \"id\": \"string\",\n      \"partner_id\": \"string\",\n      \"name\": \"string\",\n      \"enabled\": true,\n      \"detail_url\": \"string\"\n    },\n    \"attached_messages\": [\n      {\n        \"id\": \"string\",\n        \"created_date\": \"1975-06-19T17:12:36.958Z\",\n        \"type\": \"Message\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      },\n      {\n        \"id\": \"string\",\n        \"created_date\": \"2007-12-29T03:16:51.122Z\",\n        \"type\": \"Idea\",\n        \"content\": \"string\",\n        \"attachment\": \"string\",\n        \"sender\": {\n          \"email\": \"string\",\n          \"first_name\": \"string\",\n          \"last_name\": \"string\"\n        }\n      }\n    ],\n    \"state\": \"open\",\n    \"thread\": \"string\",\n    \"actions\": {\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    \"alert_triggered\": true\n  },\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.goodays.co/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "61222416-6add-4a1f-97f4-31cba1c5e7c5",
+    "name": "Goodays core events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,1146 @@
+{
+  "item": [
+    {
+      "id": "1cff5a43-66cf-42aa-958b-bf31dddd8918",
+      "name": "response",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "176ad728-6751-4ed7-96bc-b56c0bf92196",
+          "name": "responses create",
+          "request": {
+            "name": "responses create",
+            "description": {},
+            "url": {
+              "path": [
+                "responses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {}
+          },
+          "response": [
+            {
+              "id": "2cf0623b-0d57-4048-a9d8-bcf6ce6809a8",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"date\": \"1957-05-06T11:06:48.636Z\",\n  \"user\": {\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"phone\": \"string\",\n    \"crm_id\": \"string\"\n  },\n  \"context\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"place\": \"string\",\n  \"survey\": \"string\",\n  \"drop_invalid_facultative_answers\": false,\n  \"answers\": [\n    {\n      \"question\": \"string\",\n      \"value\": \"string\",\n      \"key_0\": \"string\"\n    },\n    {\n      \"question\": \"string\",\n      \"value\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  ],\n  \"medium\": \"MER\",\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1948-10-16T16:03:36.559Z\",\n    \"type\": \"NoType\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  },\n  \"collect_uid\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "34dc0ba3-362f-4c5e-ac2a-e36ea029da7a",
+          "name": "responses list",
+          "request": {
+            "name": "responses list",
+            "description": {},
+            "url": {
+              "path": [
+                "responses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_field",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "first_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "last_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "crm_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_answers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_message",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_reply",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3eb662b4-e0e5-4aba-ae8a-dcbafd7e2561",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date_field",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "crm_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_answers",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_message",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_reply",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"created_date\": \"1996-02-27T10:20:43.453Z\",\n    \"updated_date\": \"1974-09-02T20:26:33.141Z\",\n    \"has_answers\": true,\n    \"has_message\": true,\n    \"has_reply\": true,\n    \"alert_triggered\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"created_date\": \"2003-11-18T20:56:38.728Z\",\n    \"updated_date\": \"1996-04-07T16:10:15.960Z\",\n    \"has_answers\": false,\n    \"has_message\": false,\n    \"has_reply\": true,\n    \"alert_triggered\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "85de37a2-f606-451f-bec6-a55602420cc7",
+          "name": "responses bulk",
+          "request": {
+            "name": "responses bulk",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                "bulk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96536e58-6535-48a2-b7c3-341bc146e61b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    "bulk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"token\": \"string\",\n  \"created_date\": \"1974-06-04T16:51:23.380Z\",\n  \"updated_date\": \"1979-09-24T13:39:56.861Z\",\n  \"source\": \"google_play_store\",\n  \"survey\": {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": true,\n    \"detail_url\": \"string\"\n  },\n  \"answers\": [\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"csat\",\n        \"enabled\": true,\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"choices\",\n        \"enabled\": true\n      }\n    }\n  ],\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1985-10-12T05:01:50.375Z\",\n    \"type\": \"NoType\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  },\n  \"reply\": {\n    \"id\": \"string\",\n    \"created_date\": \"1979-10-01T19:00:52.153Z\",\n    \"type\": \"text\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\",\n      \"key_2\": \"string\",\n      \"key_3\": \"string\"\n    }\n  },\n  \"user\": {\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"opt_in\": {\n      \"newsletter\": true,\n      \"email\": false,\n      \"sms\": false\n    }\n  },\n  \"context\": \"string\",\n  \"place\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"delegated_to\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": true,\n    \"detail_url\": \"string\"\n  },\n  \"attached_messages\": [\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1968-02-15T16:49:06.690Z\",\n      \"type\": \"Idea\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1955-10-09T02:02:42.214Z\",\n      \"type\": \"NoType\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    }\n  ],\n  \"state\": \"open\",\n  \"thread\": \"string\",\n  \"actions\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"alert_triggered\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3052b066-3d00-4b25-a532-0608703d667a",
+          "name": "responses collect",
+          "request": {
+            "name": "responses collect",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                "collect"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {}
+          },
+          "response": [
+            {
+              "id": "699ea4bd-249d-46f1-bdcc-e6ce364c1def",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    "collect"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"date\": \"1957-05-06T11:06:48.636Z\",\n  \"user\": {\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"phone\": \"string\",\n    \"crm_id\": \"string\"\n  },\n  \"context\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"place\": \"string\",\n  \"survey\": \"string\",\n  \"drop_invalid_facultative_answers\": false,\n  \"answers\": [\n    {\n      \"question\": \"string\",\n      \"value\": \"string\",\n      \"key_0\": \"string\"\n    },\n    {\n      \"question\": \"string\",\n      \"value\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  ],\n  \"medium\": \"MER\",\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1948-10-16T16:03:36.559Z\",\n    \"type\": \"NoType\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  },\n  \"collect_uid\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd957a35-b116-4df4-a814-d4680c27fe51",
+          "name": "responses read",
+          "request": {
+            "name": "responses read",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8099c5c9-d4ec-461c-b664-4d35f5de2727",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"token\": \"string\",\n  \"created_date\": \"1974-02-20T14:57:19.272Z\",\n  \"updated_date\": \"1971-01-02T01:45:30.319Z\",\n  \"source\": \"google_messaging\",\n  \"survey\": {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": true,\n    \"detail_url\": \"string\"\n  },\n  \"answers\": [\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"emoji\",\n        \"enabled\": true,\n        \"key_0\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"nps\",\n        \"enabled\": true\n      },\n      \"key_0\": \"string\"\n    }\n  ],\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1976-08-05T13:48:24.539Z\",\n    \"type\": \"Problem\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\"\n    },\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\"\n  },\n  \"reply\": {\n    \"id\": \"string\",\n    \"created_date\": \"2017-02-16T06:22:34.520Z\",\n    \"type\": \"text\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\"\n    }\n  },\n  \"user\": {\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"opt_in\": {\n      \"newsletter\": true,\n      \"email\": true,\n      \"sms\": false,\n      \"key_0\": \"string\",\n      \"key_1\": \"string\",\n      \"key_2\": \"string\"\n    }\n  },\n  \"context\": \"string\",\n  \"place\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": true,\n    \"detail_url\": \"string\"\n  },\n  \"delegated_to\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"attached_messages\": [\n    {\n      \"id\": \"string\",\n      \"created_date\": \"2002-01-12T12:35:40.895Z\",\n      \"type\": \"Idea\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      },\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1960-07-31T21:13:40.143Z\",\n      \"type\": \"Idea\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    }\n  ],\n  \"state\": \"closed\",\n  \"thread\": \"string\",\n  \"actions\": {\n    \"key_0\": \"string\"\n  },\n  \"alert_triggered\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f1e026e2-4f19-47cd-a6b8-9297b29620e2",
+          "name": "responses call",
+          "request": {
+            "name": "responses call",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                ":id",
+                "call"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user\": \"<string>\",\n  \"note\": \"<string>\",\n  \"rating\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bc350e3f-0b84-42c6-a61c-ca7c2cb92dea",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    ":id",
+                    "call"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"user\": \"<string>\",\n  \"note\": \"<string>\",\n  \"rating\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"user\": \"string\",\n  \"note\": \"string\",\n  \"rating\": 1749,\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "82eb08ab-212c-4473-94b9-23d15c7efd49",
+          "name": "responses close",
+          "request": {
+            "name": "responses close",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                ":id",
+                "close"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {}
+          },
+          "response": [
+            {
+              "id": "4f180e5d-09c8-42c7-8050-306e5ca6c9fe",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    ":id",
+                    "close"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"user\": \"string\",\n  \"remark_type\": \"Message\",\n  \"key_0\": \"string\",\n  \"key_1\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ab392bd0-43fb-4d6e-8819-4db53f76cf26",
+          "name": "responses message",
+          "request": {
+            "name": "responses message",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                ":id",
+                "message"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"<string>\",\n  \"user\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "08ffd2d3-7357-4217-90ca-a2959bc24b85",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    ":id",
+                    "message"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"content\": \"<string>\",\n  \"user\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"user\": \"string\",\n  \"content\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f7d1342d-d117-4c56-8db1-e2f30415da00",
+          "name": "responses reply",
+          "request": {
+            "name": "responses reply",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                ":id",
+                "reply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"<string>\",\n  \"user\": \"<string>\",\n  \"remark_type\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "77de1f99-5e89-4d2a-8f08-2c53d6bff546",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    ":id",
+                    "reply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"content\": \"<string>\",\n  \"user\": \"<string>\",\n  \"remark_type\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"user\": \"string\",\n  \"content\": \"string\",\n  \"remark_type\": \"NoType\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "14b312c8-d141-4276-a685-4062df2ee06d",
+          "name": "responses spam",
+          "request": {
+            "name": "responses spam",
+            "description": {},
+            "url": {
+              "path": [
+                "responses",
+                ":id",
+                "spam"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {}
+          },
+          "response": [
+            {
+              "id": "c2b66a4d-718a-41d7-bbaf-9b7e4142a24e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "responses",
+                    ":id",
+                    "spam"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"user\": \"string\",\n  \"remark_type\": \"Message\",\n  \"key_0\": \"string\",\n  \"key_1\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.goodays.co/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b7601e89-bf45-4052-a023-9a6a43ce513b",
+    "name": "Goodays core response API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.",
+      "type": "text/plain"
+    }
+  }
+}

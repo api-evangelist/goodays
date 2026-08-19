@@ -1,0 +1,586 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodays core stats API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "stats",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "stats_dissatisfaction_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/dissatisfaction",
+            "params": [
+              {
+                "name": "by",
+                "value": "",
+                "type": "query",
+                "description": "The field used to aggregate the metric."
+              },
+              {
+                "name": "by_context",
+                "value": "",
+                "type": "query",
+                "description": "The key from the context used to aggregate the metric."
+              },
+              {
+                "name": "by_level_category",
+                "value": "",
+                "type": "query",
+                "description": "The level category value used to aggregate the metric."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "places",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "levels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "question",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nps",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "remark_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "begin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "stats_google_score_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/google_score",
+            "params": [
+              {
+                "name": "by",
+                "value": "",
+                "type": "query",
+                "description": "The field used to aggregate the metric."
+              },
+              {
+                "name": "by_level_category",
+                "value": "",
+                "type": "query",
+                "description": "The level category value used to aggregate the metric."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "places",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "levels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "begin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "month",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "stats_nps_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/nps",
+            "params": [
+              {
+                "name": "by",
+                "value": "",
+                "type": "query",
+                "description": "The field used to aggregate the metric."
+              },
+              {
+                "name": "by_context",
+                "value": "",
+                "type": "query",
+                "description": "The key from the context used to aggregate the metric."
+              },
+              {
+                "name": "by_level_category",
+                "value": "",
+                "type": "query",
+                "description": "The level category value used to aggregate the metric."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "places",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "levels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "question",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nps",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "remark_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "begin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "stats_relationship_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/relationship",
+            "params": [
+              {
+                "name": "by",
+                "value": "",
+                "type": "query",
+                "description": "The field used to aggregate the metric."
+              },
+              {
+                "name": "by_level_category",
+                "value": "",
+                "type": "query",
+                "description": "The level category value used to aggregate the metric."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "places",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "levels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "begin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "month",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "stats_remarks_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/remarks",
+            "params": [
+              {
+                "name": "by",
+                "value": "",
+                "type": "query",
+                "description": "The field used to aggregate the metric."
+              },
+              {
+                "name": "by_context",
+                "value": "",
+                "type": "query",
+                "description": "The key from the context used to aggregate the metric."
+              },
+              {
+                "name": "by_level_category",
+                "value": "",
+                "type": "query",
+                "description": "The level category value used to aggregate the metric."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "places",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "levels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "question",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nps",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "remark_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "begin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "stats_retained_customers_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/retained_customers",
+            "params": [
+              {
+                "name": "by",
+                "value": "",
+                "type": "query",
+                "description": "The field used to aggregate the metric."
+              },
+              {
+                "name": "by_context",
+                "value": "",
+                "type": "query",
+                "description": "The key from the context used to aggregate the metric."
+              },
+              {
+                "name": "by_level_category",
+                "value": "",
+                "type": "query",
+                "description": "The level category value used to aggregate the metric."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "places",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "levels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "question",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nps",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "remark_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "begin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "stats_satisfaction_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/satisfaction",
+            "params": [
+              {
+                "name": "by",
+                "value": "",
+                "type": "query",
+                "description": "The field used to aggregate the metric."
+              },
+              {
+                "name": "by_context",
+                "value": "",
+                "type": "query",
+                "description": "The key from the context used to aggregate the metric."
+              },
+              {
+                "name": "by_level_category",
+                "value": "",
+                "type": "query",
+                "description": "The level category value used to aggregate the metric."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "places",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "levels",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "question",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "survey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nps",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "remark_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "begin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "stats_surveys_read",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/stats/surveys/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

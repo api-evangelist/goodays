@@ -1,0 +1,59 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Goodays core dashboard API",
+    "version": "v2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "dashboard",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "dashboard_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.goodays.co/v2/dashboard",
+            "params": [
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Which field to use when ordering the results."
+              },
+              {
+                "name": "place",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "level",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "pro_user",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

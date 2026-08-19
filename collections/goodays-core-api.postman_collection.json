@@ -1,0 +1,2987 @@
+{
+  "item": [
+    {
+      "id": "037f6570-b1b8-4ea0-aa1a-bf23af52cedc",
+      "name": "core",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "eea072cb-1b9e-4f2b-8d44-02326b55696e",
+          "name": "configuration list",
+          "request": {
+            "name": "configuration list",
+            "description": {},
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a86ea492-9e2f-4d86-8090-9bce86492c6f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "configuration"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"custom_parameters\": [\n      {\n        \"key\": \"string\",\n        \"label\": \"string\",\n        \"required\": true,\n        \"use_in_stats\": true\n      },\n      {\n        \"key\": \"string\",\n        \"label\": \"string\",\n        \"required\": true,\n        \"use_in_stats\": false,\n        \"key_0\": \"string\"\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  },\n  {\n    \"custom_parameters\": [\n      {\n        \"key\": \"string\",\n        \"label\": \"string\",\n        \"required\": true,\n        \"use_in_stats\": false,\n        \"key_0\": \"string\"\n      },\n      {\n        \"key\": \"string\",\n        \"label\": \"string\",\n        \"required\": false,\n        \"use_in_stats\": false\n      }\n    ],\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e1eff947-37a5-43e1-b34e-d401008a5c48",
+          "name": "levels list",
+          "request": {
+            "name": "levels list",
+            "description": {},
+            "url": {
+              "path": [
+                "levels"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "category_id",
+                  "value": "<number>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0a9dba5f-bcb3-4ff5-8b97-7ddb598e4aa3",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "levels"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category_id",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"category_id\": 6990,\n    \"name\": \"string\",\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\",\n    \"key_4\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"category_id\": 8048,\n    \"name\": \"string\",\n    \"detail_url\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "51ca200a-ff03-4d13-9c62-bf1d85d95958",
+          "name": "levels read",
+          "request": {
+            "name": "levels read",
+            "description": {},
+            "url": {
+              "path": [
+                "levels",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) A unique value identifying this brand level."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7f57580e-2d0f-48a6-bbd1-2660c4e98191",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "levels",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) A unique value identifying this brand level."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"partner_id\": \"string\",\n  \"category_id\": 2408,\n  \"category\": \"string\",\n  \"name\": \"string\",\n  \"created_date\": \"1969-09-22T18:26:27.867Z\",\n  \"is_active\": \"string\",\n  \"lang\": \"string\",\n  \"places\": \"string\",\n  \"responses\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "201f8f7a-8efc-4240-94c2-d4259bf75cca",
+          "name": "levels places list",
+          "request": {
+            "name": "levels places list",
+            "description": {},
+            "url": {
+              "path": [
+                "levels",
+                ":level_pk",
+                "places"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "partner_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "level_pk",
+                  "description": "(Required) A unique value identifying the parent level."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "94e39654-a41e-48c9-b8d9-fcc253092596",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "levels",
+                    ":level_pk",
+                    "places"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "partner_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "level_pk",
+                      "description": "(Required) A unique value identifying the parent level."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9c593ac1-4ee6-4caf-9e9f-63d574cede64",
+          "name": "levels responses list",
+          "request": {
+            "name": "levels responses list",
+            "description": {},
+            "url": {
+              "path": [
+                "levels",
+                ":level_pk",
+                "responses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_field",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "first_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "last_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "crm_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_answers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_message",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_reply",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "level_pk",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3e31723c-33b2-48b0-a970-a8357f5a293d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "levels",
+                    ":level_pk",
+                    "responses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date_field",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "crm_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_answers",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_message",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_reply",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "level_pk",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"created_date\": \"1977-11-16T18:00:48.008Z\",\n    \"updated_date\": \"1962-04-28T20:34:50.775Z\",\n    \"has_answers\": false,\n    \"has_message\": false,\n    \"has_reply\": true,\n    \"alert_triggered\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"created_date\": \"2017-11-15T14:54:22.321Z\",\n    \"updated_date\": \"2018-11-01T21:28:20.513Z\",\n    \"has_answers\": true,\n    \"has_message\": false,\n    \"has_reply\": true,\n    \"alert_triggered\": true,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "80be2111-b9eb-4d43-aba2-7febc9cd4bbc",
+          "name": "levels responses bulk",
+          "request": {
+            "name": "levels responses bulk",
+            "description": {},
+            "url": {
+              "path": [
+                "levels",
+                ":level_pk",
+                "responses",
+                "bulk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "level_pk",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "18e53b82-a0cd-48ee-957f-9bd2d8faee96",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "levels",
+                    ":level_pk",
+                    "responses",
+                    "bulk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "level_pk",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"token\": \"string\",\n  \"created_date\": \"2014-02-13T07:47:18.164Z\",\n  \"updated_date\": \"1966-04-14T23:01:27.453Z\",\n  \"source\": \"tripadvisor\",\n  \"survey\": {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"answers\": [\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"multiple_answers\",\n        \"enabled\": true\n      },\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"nps\",\n        \"enabled\": false\n      },\n      \"key_0\": \"string\"\n    }\n  ],\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1995-02-14T17:33:13.063Z\",\n    \"type\": \"NoType\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\"\n    }\n  },\n  \"reply\": {\n    \"id\": \"string\",\n    \"created_date\": \"1971-09-12T20:00:55.021Z\",\n    \"type\": \"text\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  },\n  \"user\": {\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"opt_in\": {\n      \"newsletter\": false,\n      \"email\": true,\n      \"sms\": false,\n      \"key_0\": \"string\",\n      \"key_1\": \"string\",\n      \"key_2\": \"string\"\n    }\n  },\n  \"context\": \"string\",\n  \"place\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": true,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  },\n  \"delegated_to\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"attached_messages\": [\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1989-11-20T20:48:56.506Z\",\n      \"type\": \"Message\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1948-02-29T15:17:47.671Z\",\n      \"type\": \"NoType\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\",\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"key_0\": \"string\"\n    }\n  ],\n  \"state\": \"open\",\n  \"thread\": \"string\",\n  \"actions\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\"\n  },\n  \"alert_triggered\": false,\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97f38649-fbe8-4f65-8d8b-7548b6ab9ed1",
+          "name": "places list",
+          "request": {
+            "name": "places list",
+            "description": {},
+            "url": {
+              "path": [
+                "places"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "partner_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "821d71a0-bd61-479b-a850-1ec26abb587f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "places"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "partner_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b0069a38-b19b-4f73-95c2-6f5b47990d3f",
+          "name": "places read",
+          "request": {
+            "name": "places read",
+            "description": {},
+            "url": {
+              "path": [
+                "places",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) A unique value identifying this place."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f143d58-d171-42f0-84f3-7c565aa3348e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "places",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) A unique value identifying this place."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"partner_id\": \"string\",\n  \"universe\": \"string\",\n  \"name\": \"string\",\n  \"street\": \"string\",\n  \"postal_code\": \"string\",\n  \"city\": \"string\",\n  \"phone\": \"string\",\n  \"latitude\": 7352.2235485832125,\n  \"longitude\": 7974.096787659179,\n  \"lang\": \"string\",\n  \"is_active\": true,\n  \"created_date\": \"1952-08-22T22:38:24.615Z\",\n  \"logo\": \"string\",\n  \"levels\": \"string\",\n  \"surveys\": \"string\",\n  \"users\": \"string\",\n  \"responses\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "71c78f7f-7719-4f36-91c2-81710a0c7567",
+          "name": "places levels list",
+          "request": {
+            "name": "places levels list",
+            "description": {},
+            "url": {
+              "path": [
+                "places",
+                ":place_pk",
+                "levels"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "category_id",
+                  "value": "<number>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "place_pk",
+                  "description": "(Required) A unique value identifying the parent place."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6d974279-1bef-4352-9805-d83613671f24",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "places",
+                    ":place_pk",
+                    "levels"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "category_id",
+                      "value": "<number>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "place_pk",
+                      "description": "(Required) A unique value identifying the parent place."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"category_id\": 6990,\n    \"name\": \"string\",\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\",\n    \"key_4\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"category_id\": 8048,\n    \"name\": \"string\",\n    \"detail_url\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "95b349b0-67e9-45d8-bf95-742a68f648d3",
+          "name": "places responses list",
+          "request": {
+            "name": "places responses list",
+            "description": {},
+            "url": {
+              "path": [
+                "places",
+                ":place_pk",
+                "responses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_field",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "first_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "last_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "crm_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_answers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_message",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_reply",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "place_pk",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ef9b3a8f-9f9c-4159-9c05-f18f0c104dbb",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "places",
+                    ":place_pk",
+                    "responses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date_field",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "crm_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_answers",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_message",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_reply",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "place_pk",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"created_date\": \"1977-11-16T18:00:48.008Z\",\n    \"updated_date\": \"1962-04-28T20:34:50.775Z\",\n    \"has_answers\": false,\n    \"has_message\": false,\n    \"has_reply\": true,\n    \"alert_triggered\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"created_date\": \"2017-11-15T14:54:22.321Z\",\n    \"updated_date\": \"2018-11-01T21:28:20.513Z\",\n    \"has_answers\": true,\n    \"has_message\": false,\n    \"has_reply\": true,\n    \"alert_triggered\": true,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d31f5766-f7f0-490d-bab0-b79c4712fc84",
+          "name": "places responses bulk",
+          "request": {
+            "name": "places responses bulk",
+            "description": {},
+            "url": {
+              "path": [
+                "places",
+                ":place_pk",
+                "responses",
+                "bulk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "place_pk",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a86f1567-07a7-439b-ad71-8ad6981b676c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "places",
+                    ":place_pk",
+                    "responses",
+                    "bulk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "place_pk",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"token\": \"string\",\n  \"created_date\": \"1958-03-24T19:35:21.325Z\",\n  \"updated_date\": \"1961-12-01T14:58:22.190Z\",\n  \"source\": \"sms_conv\",\n  \"survey\": {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"answers\": [\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"text\",\n        \"enabled\": true\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"multiple_answers\",\n        \"enabled\": true\n      }\n    }\n  ],\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1997-12-17T07:00:54.033Z\",\n    \"type\": \"Problem\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\"\n    }\n  },\n  \"reply\": {\n    \"id\": \"string\",\n    \"created_date\": \"1998-11-02T04:46:24.668Z\",\n    \"type\": \"call\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  },\n  \"user\": {\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"opt_in\": {\n      \"newsletter\": false,\n      \"email\": false,\n      \"sms\": false,\n      \"key_0\": \"string\"\n    },\n    \"key_0\": \"string\"\n  },\n  \"context\": \"string\",\n  \"place\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"delegated_to\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": true,\n    \"detail_url\": \"string\"\n  },\n  \"attached_messages\": [\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1986-05-02T10:33:16.780Z\",\n      \"type\": \"Idea\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1946-09-11T03:59:09.816Z\",\n      \"type\": \"Praise\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    }\n  ],\n  \"state\": \"spam\",\n  \"thread\": \"string\",\n  \"actions\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"alert_triggered\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7bccca4e-2c55-4d43-aca6-41198ce129b2",
+          "name": "places surveys list",
+          "request": {
+            "name": "places surveys list",
+            "description": {},
+            "url": {
+              "path": [
+                "places",
+                ":place_pk",
+                "surveys"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "slug",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "place_pk",
+                  "description": "(Required) A unique value identifying the parent place."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c5ea5de1-e300-43b6-be8e-45721b85b0b0",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "places",
+                    ":place_pk",
+                    "surveys"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "slug",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "place_pk",
+                      "description": "(Required) A unique value identifying the parent place."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b4c870a1-cf9d-4ed8-8b3b-538779cd309c",
+          "name": "places users list",
+          "request": {
+            "name": "places users list",
+            "description": {},
+            "url": {
+              "path": [
+                "places",
+                ":place_pk",
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "first_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "last_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "place_pk",
+                  "description": "(Required) A unique value identifying the parent place."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "390451ee-dd40-4ebf-b7ed-1c95d3dfc981",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "places",
+                    ":place_pk",
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "place_pk",
+                      "description": "(Required) A unique value identifying the parent place."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"phone\": \"string\",\n    \"read_only\": false,\n    \"notifications\": true,\n    \"places\": \"string\",\n    \"last_login\": \"1979-09-22T04:33:28.009Z\",\n    \"lang_training\": \"it\"\n  },\n  {\n    \"id\": \"string\",\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"phone\": \"string\",\n    \"read_only\": false,\n    \"notifications\": true,\n    \"places\": \"string\",\n    \"last_login\": \"1977-10-12T11:51:57.669Z\",\n    \"lang_training\": \"de\",\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bc6b619a-2417-464d-9e28-79fe05d768ff",
+          "name": "surveys list",
+          "request": {
+            "name": "surveys list",
+            "description": {},
+            "url": {
+              "path": [
+                "surveys"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "slug",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bb089f42-531f-4cb6-95fb-2350d83402c0",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "slug",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a38b52f8-e12f-4c56-86ad-cf8a694bd9ce",
+          "name": "surveys read",
+          "request": {
+            "name": "surveys read",
+            "description": {},
+            "url": {
+              "path": [
+                "surveys",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) A unique value identifying this rating question tag."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4e8bdc59-ca47-4ab3-b526-708ca1129bcd",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) A unique value identifying this rating question tag."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"slug\": \"string\",\n  \"label\": \"string\",\n  \"enabled\": true,\n  \"questions\": \"string\",\n  \"places\": \"string\",\n  \"responses\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2d2dc163-97b2-4c22-8d35-fa4787383908",
+          "name": "surveys places list",
+          "request": {
+            "name": "surveys places list",
+            "description": {},
+            "url": {
+              "path": [
+                "surveys",
+                ":survey_pk",
+                "places"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "partner_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "survey_pk",
+                  "description": "(Required) A unique value identifying the parent survey."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5c846a6d-e869-462b-a3f5-10ec37e786a7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys",
+                    ":survey_pk",
+                    "places"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "partner_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "survey_pk",
+                      "description": "(Required) A unique value identifying the parent survey."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "895f48ac-2414-47e8-a4fe-6e6ec616c841",
+          "name": "surveys responses list",
+          "request": {
+            "name": "surveys responses list",
+            "description": {},
+            "url": {
+              "path": [
+                "surveys",
+                ":survey_pk",
+                "responses"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "date_field",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "first_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "last_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "crm_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_answers",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_message",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "has_reply",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "survey_pk",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67741bfc-3bd4-4a54-9bbb-613186401817",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys",
+                    ":survey_pk",
+                    "responses"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "start_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "date_field",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "crm_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_answers",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_message",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "has_reply",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "survey_pk",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"created_date\": \"1977-11-16T18:00:48.008Z\",\n    \"updated_date\": \"1962-04-28T20:34:50.775Z\",\n    \"has_answers\": false,\n    \"has_message\": false,\n    \"has_reply\": true,\n    \"alert_triggered\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"created_date\": \"2017-11-15T14:54:22.321Z\",\n    \"updated_date\": \"2018-11-01T21:28:20.513Z\",\n    \"has_answers\": true,\n    \"has_message\": false,\n    \"has_reply\": true,\n    \"alert_triggered\": true,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c5f7d3d7-26b2-40ff-9169-92c3af2da464",
+          "name": "surveys responses bulk",
+          "request": {
+            "name": "surveys responses bulk",
+            "description": {},
+            "url": {
+              "path": [
+                "surveys",
+                ":survey_pk",
+                "responses",
+                "bulk"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "survey_pk",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "21c3c3a7-806e-4276-a307-5395d4bfd8f8",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "surveys",
+                    ":survey_pk",
+                    "responses",
+                    "bulk"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "survey_pk",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"token\": \"string\",\n  \"created_date\": \"1958-03-24T19:35:21.325Z\",\n  \"updated_date\": \"1961-12-01T14:58:22.190Z\",\n  \"source\": \"sms_conv\",\n  \"survey\": {\n    \"id\": \"string\",\n    \"slug\": \"string\",\n    \"label\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"answers\": [\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"text\",\n        \"enabled\": true\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"value\": \"string\",\n      \"question\": {\n        \"id\": \"string\",\n        \"title\": \"string\",\n        \"type\": \"multiple_answers\",\n        \"enabled\": true\n      }\n    }\n  ],\n  \"message\": {\n    \"id\": \"string\",\n    \"created_date\": \"1997-12-17T07:00:54.033Z\",\n    \"type\": \"Problem\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\"\n    }\n  },\n  \"reply\": {\n    \"id\": \"string\",\n    \"created_date\": \"1998-11-02T04:46:24.668Z\",\n    \"type\": \"call\",\n    \"content\": \"string\",\n    \"attachment\": \"string\",\n    \"sender\": {\n      \"email\": \"string\",\n      \"first_name\": \"string\",\n      \"last_name\": \"string\",\n      \"key_0\": \"string\",\n      \"key_1\": \"string\"\n    }\n  },\n  \"user\": {\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"opt_in\": {\n      \"newsletter\": false,\n      \"email\": false,\n      \"sms\": false,\n      \"key_0\": \"string\"\n    },\n    \"key_0\": \"string\"\n  },\n  \"context\": \"string\",\n  \"place\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  \"delegated_to\": {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": true,\n    \"detail_url\": \"string\"\n  },\n  \"attached_messages\": [\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1986-05-02T10:33:16.780Z\",\n      \"type\": \"Idea\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"created_date\": \"1946-09-11T03:59:09.816Z\",\n      \"type\": \"Praise\",\n      \"content\": \"string\",\n      \"attachment\": \"string\",\n      \"sender\": {\n        \"email\": \"string\",\n        \"first_name\": \"string\",\n        \"last_name\": \"string\"\n      }\n    }\n  ],\n  \"state\": \"spam\",\n  \"thread\": \"string\",\n  \"actions\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  \"alert_triggered\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b074c263-1e14-4f74-824e-09b3406cae0a",
+          "name": "universes list",
+          "request": {
+            "name": "universes list",
+            "description": {},
+            "url": {
+              "path": [
+                "universes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "728c331d-66ef-46f0-959b-f0a2bfe5747a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "universes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"key\": \"string\",\n    \"label\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"key\": \"string\",\n    \"label\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "df533b58-5dcb-4a2a-8491-f4715be102b0",
+          "name": "users list",
+          "request": {
+            "name": "users list",
+            "description": {},
+            "url": {
+              "path": [
+                "users"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "first_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "last_name",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b01da292-2128-4687-ad01-4fe22a74bc9e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "first_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "last_name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "phone",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"phone\": \"string\",\n    \"read_only\": false,\n    \"notifications\": true,\n    \"places\": \"string\",\n    \"last_login\": \"1979-09-22T04:33:28.009Z\",\n    \"lang_training\": \"it\"\n  },\n  {\n    \"id\": \"string\",\n    \"email\": \"string\",\n    \"first_name\": \"string\",\n    \"last_name\": \"string\",\n    \"phone\": \"string\",\n    \"read_only\": false,\n    \"notifications\": true,\n    \"places\": \"string\",\n    \"last_login\": \"1977-10-12T11:51:57.669Z\",\n    \"lang_training\": \"de\",\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2e318b05-5c7a-4ccf-b215-676ee867c70d",
+          "name": "users read",
+          "request": {
+            "name": "users read",
+            "description": {},
+            "url": {
+              "path": [
+                "users",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) A unique value identifying this user profile."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0e906b12-5e70-45e6-ba04-4635a5270e42",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) A unique value identifying this user profile."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"email\": \"string\",\n  \"first_name\": \"string\",\n  \"last_name\": \"string\",\n  \"phone\": \"string\",\n  \"read_only\": true,\n  \"notifications\": false,\n  \"places\": \"string\",\n  \"last_login\": \"2010-05-28T01:59:21.306Z\",\n  \"lang_training\": \"nl\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a434f24d-da22-490e-b48d-d3643153b970",
+          "name": "users places list",
+          "request": {
+            "name": "users places list",
+            "description": {},
+            "url": {
+              "path": [
+                "users",
+                ":user_pk",
+                "places"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "cursor",
+                  "value": "<string>",
+                  "description": "The pagination cursor value."
+                },
+                {
+                  "disabled": false,
+                  "key": "page_size",
+                  "value": "<integer>",
+                  "description": "Number of results to return per page."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Which field to use when ordering the results."
+                },
+                {
+                  "disabled": false,
+                  "key": "partner_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "user_pk",
+                  "description": "(Required) A unique value identifying the parent user."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "126209eb-654b-4821-834f-8aa0465e980c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "users",
+                    ":user_pk",
+                    "places"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "cursor",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page_size",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "partner_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "user_pk",
+                      "description": "(Required) A unique value identifying the parent user."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\"\n  },\n  {\n    \"id\": \"string\",\n    \"partner_id\": \"string\",\n    \"name\": \"string\",\n    \"enabled\": false,\n    \"detail_url\": \"string\",\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.goodays.co/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5d38eec2-c9b7-4de1-9074-71a46e1ed37d",
+    "name": "Goodays core API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.",
+      "type": "text/plain"
+    }
+  }
+}

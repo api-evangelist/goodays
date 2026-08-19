@@ -1,0 +1,1508 @@
+{
+  "item": [
+    {
+      "id": "f6efed95-ad4d-4936-81c8-79e3b23d0615",
+      "name": "stats",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1289c588-5fda-45f5-8aab-701f82a3fb58",
+          "name": "stats dissatisfaction list",
+          "request": {
+            "name": "stats dissatisfaction list",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "dissatisfaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "by",
+                  "value": "<string>",
+                  "description": "The field used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_context",
+                  "value": "<string>",
+                  "description": "The key from the context used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_level_category",
+                  "value": "<string>",
+                  "description": "The level category value used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "places",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "level",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "levels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nps",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "remark_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "begin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "feae73a8-166c-454b-a3b2-fc330cfbac53",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "dissatisfaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_context",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_level_category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "places",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "level",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "levels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "question",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "nps",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "remark_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "begin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 6920,\n        \"percentage\": 2018.9171394612126,\n        \"pending\": {\n          \"count\": 181,\n          \"percentage\": 3025.0460248956256,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        },\n        \"spam\": {\n          \"count\": 2963,\n          \"percentage\": 1497.4207543713037\n        },\n        \"ignored\": {\n          \"count\": 2480,\n          \"percentage\": 1154.8040024085083\n        },\n        \"call\": {\n          \"count\": 6872,\n          \"percentage\": 5219.148503467782\n        },\n        \"text\": {\n          \"count\": 4491,\n          \"percentage\": 6349.405342576459,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"key_0\": \"string\"\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 6531,\n        \"percentage\": 2717.515317041126,\n        \"pending\": {\n          \"count\": 4821,\n          \"percentage\": 6685.012471911192\n        },\n        \"spam\": {\n          \"count\": 2906,\n          \"percentage\": 2165.385565956728,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        },\n        \"ignored\": {\n          \"count\": 7851,\n          \"percentage\": 6177.935903729453\n        },\n        \"call\": {\n          \"count\": 719,\n          \"percentage\": 6143.631998183312\n        },\n        \"text\": {\n          \"count\": 6988,\n          \"percentage\": 2253.590345399796\n        }\n      }\n    ],\n    \"key_0\": \"string\"\n  },\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 5626,\n        \"percentage\": 3355.692089671493,\n        \"pending\": {\n          \"count\": 4481,\n          \"percentage\": 9438.702848893086,\n          \"key_0\": \"string\"\n        },\n        \"spam\": {\n          \"count\": 2912,\n          \"percentage\": 1166.7794608292693,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"ignored\": {\n          \"count\": 9769,\n          \"percentage\": 4119.82585168598,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"call\": {\n          \"count\": 8609,\n          \"percentage\": 1864.568097081547,\n          \"key_0\": \"string\"\n        },\n        \"text\": {\n          \"count\": 5593,\n          \"percentage\": 2807.315306460779,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        }\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 4284,\n        \"percentage\": 1199.529482413041,\n        \"pending\": {\n          \"count\": 6470,\n          \"percentage\": 2756.451361837846,\n          \"key_0\": \"string\"\n        },\n        \"spam\": {\n          \"count\": 136,\n          \"percentage\": 3616.21374367892,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"ignored\": {\n          \"count\": 543,\n          \"percentage\": 1555.301553418672,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\",\n          \"key_3\": \"string\"\n        },\n        \"call\": {\n          \"count\": 8019,\n          \"percentage\": 3146.167558051263,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"text\": {\n          \"count\": 97,\n          \"percentage\": 8418.635313782806\n        },\n        \"key_0\": \"string\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e009d5c-0d5b-4a60-a667-051f3e339a3d",
+          "name": "stats google score list",
+          "request": {
+            "name": "stats google score list",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "google_score"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "by",
+                  "value": "<string>",
+                  "description": "The field used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_level_category",
+                  "value": "<string>",
+                  "description": "The level category value used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "places",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "level",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "levels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "begin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "month",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "629ab4fe-00ff-4b45-9504-503ed6bc9981",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "google_score"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_level_category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "places",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "level",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "levels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "begin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "month",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"public_rating\": 3975.265691423239,\n        \"public_rating_count\": 2754,\n        \"places_count\": 9760,\n        \"monthly_rating\": 4849.030529564052,\n        \"monthly_rating_count\": 3464,\n        \"action_phone_count\": 1913,\n        \"action_website_count\": 5411,\n        \"itinerary_count\": 4245,\n        \"views_count\": 3513,\n        \"rating_distribution\": [\n          {\n            \"value\": 3798,\n            \"count\": 9877,\n            \"key_0\": \"string\"\n          },\n          {\n            \"value\": 6739,\n            \"count\": 3255,\n            \"key_0\": \"string\",\n            \"key_1\": \"string\",\n            \"key_2\": \"string\"\n          }\n        ]\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"public_rating\": 8811.775181556399,\n        \"public_rating_count\": 7784,\n        \"places_count\": 932,\n        \"monthly_rating\": 1856.7927562024545,\n        \"monthly_rating_count\": 8476,\n        \"action_phone_count\": 4822,\n        \"action_website_count\": 6636,\n        \"itinerary_count\": 5574,\n        \"views_count\": 5468,\n        \"rating_distribution\": [\n          {\n            \"value\": 8293,\n            \"count\": 3915\n          },\n          {\n            \"value\": 715,\n            \"count\": 8896,\n            \"key_0\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"public_rating\": 3192.3793754029616,\n        \"public_rating_count\": 3426,\n        \"places_count\": 6227,\n        \"monthly_rating\": 7230.390716156868,\n        \"monthly_rating_count\": 907,\n        \"action_phone_count\": 5426,\n        \"action_website_count\": 3161,\n        \"itinerary_count\": 8133,\n        \"views_count\": 9287,\n        \"rating_distribution\": [\n          {\n            \"value\": 1266,\n            \"count\": 1933\n          },\n          {\n            \"value\": 5316,\n            \"count\": 3533,\n            \"key_0\": \"string\",\n            \"key_1\": \"string\"\n          }\n        ]\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"public_rating\": 8397.182023480556,\n        \"public_rating_count\": 5577,\n        \"places_count\": 9511,\n        \"monthly_rating\": 7078.290283675337,\n        \"monthly_rating_count\": 3352,\n        \"action_phone_count\": 2121,\n        \"action_website_count\": 4809,\n        \"itinerary_count\": 3685,\n        \"views_count\": 3055,\n        \"rating_distribution\": [\n          {\n            \"value\": 8625,\n            \"count\": 1916\n          },\n          {\n            \"value\": 3224,\n            \"count\": 7609,\n            \"key_0\": \"string\"\n          }\n        ]\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b6a128c2-e990-4c01-b303-2d348f9ff98d",
+          "name": "stats nps list",
+          "request": {
+            "name": "stats nps list",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "nps"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "by",
+                  "value": "<string>",
+                  "description": "The field used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_context",
+                  "value": "<string>",
+                  "description": "The key from the context used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_level_category",
+                  "value": "<string>",
+                  "description": "The level category value used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "places",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "level",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "levels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nps",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "remark_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "begin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "60f176f6-5bf4-41ec-8546-61999283bbf6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "nps"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_context",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_level_category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "places",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "level",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "levels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "question",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "nps",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "remark_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "begin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 2436,\n        \"score\": 270,\n        \"detractor\": {\n          \"count\": 2346,\n          \"percentage\": 7682.246866979018,\n          \"key_0\": \"string\"\n        },\n        \"passive\": {\n          \"count\": 6152,\n          \"percentage\": 6542.0365811537895,\n          \"key_0\": \"string\"\n        },\n        \"promoter\": {\n          \"count\": 464,\n          \"percentage\": 3707.858987904181,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        }\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 5327,\n        \"score\": 5493,\n        \"detractor\": {\n          \"count\": 4464,\n          \"percentage\": 1665.7363971737127,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        },\n        \"passive\": {\n          \"count\": 3039,\n          \"percentage\": 2482.330388513837,\n          \"key_0\": \"string\"\n        },\n        \"promoter\": {\n          \"count\": 9641,\n          \"percentage\": 514.6569381532196,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\",\n          \"key_3\": \"string\"\n        }\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 6296,\n        \"score\": 3343,\n        \"detractor\": {\n          \"count\": 7287,\n          \"percentage\": 6992.9722355784725,\n          \"key_0\": \"string\"\n        },\n        \"passive\": {\n          \"count\": 9209,\n          \"percentage\": 6483.638254342732,\n          \"key_0\": \"string\"\n        },\n        \"promoter\": {\n          \"count\": 1155,\n          \"percentage\": 556.481072639815,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        }\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 7854,\n        \"score\": 6483,\n        \"detractor\": {\n          \"count\": 446,\n          \"percentage\": 8516.980238569357,\n          \"key_0\": \"string\"\n        },\n        \"passive\": {\n          \"count\": 1681,\n          \"percentage\": 2303.0358953057707,\n          \"key_0\": \"string\"\n        },\n        \"promoter\": {\n          \"count\": 8066,\n          \"percentage\": 6892.276300308337\n        }\n      }\n    ],\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d506679a-1da5-4bbd-87d7-351e88bba423",
+          "name": "stats relationship list",
+          "request": {
+            "name": "stats relationship list",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "relationship"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "by",
+                  "value": "<string>",
+                  "description": "The field used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_level_category",
+                  "value": "<string>",
+                  "description": "The level category value used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "places",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "level",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "levels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "begin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "month",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "27724e01-ea49-4627-9dd3-ad54b3d6422b",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "relationship"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_level_category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "places",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "level",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "levels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "begin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "month",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"reply_rate\": 8152.527865344863,\n        \"reply_time\": 5180,\n        \"reply_quality\": 4265.429353964388,\n        \"customer_service_rating\": 205.18963608581632\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"reply_rate\": 300.50257096053576,\n        \"reply_time\": 4959,\n        \"reply_quality\": 9927.843246019533,\n        \"customer_service_rating\": 709.6121289103552\n      }\n    ],\n    \"key_0\": \"string\"\n  },\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"reply_rate\": 6380.052433945067,\n        \"reply_time\": 912,\n        \"reply_quality\": 4650.844935978211,\n        \"customer_service_rating\": 9906.94139238058\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"reply_rate\": 4731.639276558121,\n        \"reply_time\": 9843,\n        \"reply_quality\": 6625.213786289024,\n        \"customer_service_rating\": 5034.736856833203\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "511db373-0276-492f-8058-dd1fdabb8136",
+          "name": "stats remarks list",
+          "request": {
+            "name": "stats remarks list",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "remarks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "by",
+                  "value": "<string>",
+                  "description": "The field used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_context",
+                  "value": "<string>",
+                  "description": "The key from the context used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_level_category",
+                  "value": "<string>",
+                  "description": "The level category value used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "places",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "level",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "levels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nps",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "remark_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "begin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1d632eae-b837-431a-81bd-b74d6cc103a5",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "remarks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_context",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_level_category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "places",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "level",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "levels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "question",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "nps",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "remark_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "begin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 5391,\n        \"Idea\": {\n          \"count\": 8300,\n          \"percentage\": 6034.008465384763,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        },\n        \"Message\": {\n          \"count\": 3727,\n          \"percentage\": 8596.812606237321,\n          \"key_0\": \"string\"\n        },\n        \"Praise\": {\n          \"count\": 2783,\n          \"percentage\": 6006.0071933008485\n        },\n        \"Problem\": {\n          \"count\": 3372,\n          \"percentage\": 4684.373026224575\n        },\n        \"Question\": {\n          \"count\": 4360,\n          \"percentage\": 3181.5154912094044\n        }\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 7689,\n        \"Idea\": {\n          \"count\": 9851,\n          \"percentage\": 7993.050224750823,\n          \"key_0\": \"string\"\n        },\n        \"Message\": {\n          \"count\": 764,\n          \"percentage\": 1935.3021435635364\n        },\n        \"Praise\": {\n          \"count\": 2502,\n          \"percentage\": 7237.944184491537,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"Problem\": {\n          \"count\": 6529,\n          \"percentage\": 624.0372216699186,\n          \"key_0\": \"string\"\n        },\n        \"Question\": {\n          \"count\": 7954,\n          \"percentage\": 2633.4532671032116,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        }\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  },\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 3829,\n        \"Idea\": {\n          \"count\": 1308,\n          \"percentage\": 3332.946706292953,\n          \"key_0\": \"string\"\n        },\n        \"Message\": {\n          \"count\": 8310,\n          \"percentage\": 1994.0383969079012\n        },\n        \"Praise\": {\n          \"count\": 2770,\n          \"percentage\": 2128.8520797666033,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\"\n        },\n        \"Problem\": {\n          \"count\": 8763,\n          \"percentage\": 4698.972451763012,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"Question\": {\n          \"count\": 847,\n          \"percentage\": 3080.383043336109,\n          \"key_0\": \"string\"\n        }\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"count\": 353,\n        \"Idea\": {\n          \"count\": 8921,\n          \"percentage\": 9924.521598071273,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        \"Message\": {\n          \"count\": 586,\n          \"percentage\": 4034.417633403887,\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\",\n          \"key_3\": \"string\"\n        },\n        \"Praise\": {\n          \"count\": 6899,\n          \"percentage\": 9994.426498584182,\n          \"key_0\": \"string\"\n        },\n        \"Problem\": {\n          \"count\": 658,\n          \"percentage\": 6148.229161484768\n        },\n        \"Question\": {\n          \"count\": 5101,\n          \"percentage\": 464.6505030469583,\n          \"key_0\": \"string\"\n        }\n      }\n    ],\n    \"key_0\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "75ba26ac-0a1d-44f5-9ff3-f74c1629d452",
+          "name": "stats retained customers list",
+          "request": {
+            "name": "stats retained customers list",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "retained_customers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "by",
+                  "value": "<string>",
+                  "description": "The field used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_context",
+                  "value": "<string>",
+                  "description": "The key from the context used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_level_category",
+                  "value": "<string>",
+                  "description": "The level category value used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "places",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "level",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "levels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nps",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "remark_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "begin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0fddfa54-f9a8-4a16-8703-cb8ae0bcae1f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "retained_customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_context",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_level_category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "places",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "level",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "levels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "question",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "nps",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "remark_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "begin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"retained_customers_count\": 1870,\n        \"retained_customers_percentage\": 3023.738756479458,\n        \"customers_responding_count\": 5189\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"retained_customers_count\": 471,\n        \"retained_customers_percentage\": 9943.633639233074,\n        \"customers_responding_count\": 1591\n      }\n    ],\n    \"key_0\": \"string\"\n  },\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"retained_customers_count\": 3229,\n        \"retained_customers_percentage\": 7029.156755789493,\n        \"customers_responding_count\": 8268,\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\"\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"retained_customers_count\": 7379,\n        \"retained_customers_percentage\": 8240.732238668239,\n        \"customers_responding_count\": 9317\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "13187c31-52d8-432e-8265-cc7e344d0828",
+          "name": "stats satisfaction list",
+          "request": {
+            "name": "stats satisfaction list",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "satisfaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "by",
+                  "value": "<string>",
+                  "description": "The field used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_context",
+                  "value": "<string>",
+                  "description": "The key from the context used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "by_level_category",
+                  "value": "<string>",
+                  "description": "The level category value used to aggregate the metric."
+                },
+                {
+                  "disabled": false,
+                  "key": "place",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "places",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "level",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "levels",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "question",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "survey",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nps",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "remark_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "begin",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "22d43870-978a-4d57-9351-bd5c5e8cc848",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "satisfaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "by",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_context",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "by_level_category",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "place",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "places",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "level",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "levels",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "question",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "survey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "nps",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "remark_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "begin",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"average\": 3384.072968116507,\n        \"ratings_count\": 6652,\n        \"responses_count\": 5332\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"average\": 4428.379240736233,\n        \"ratings_count\": 2255,\n        \"responses_count\": 3023,\n        \"key_0\": \"string\",\n        \"key_1\": \"string\",\n        \"key_2\": \"string\",\n        \"key_3\": \"string\"\n      }\n    ],\n    \"key_0\": \"string\"\n  },\n  {\n    \"data\": [\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"average\": 9751.519113896444,\n        \"ratings_count\": 42,\n        \"responses_count\": 4710\n      },\n      {\n        \"key\": \"string\",\n        \"description\": \"string\",\n        \"average\": 4109.288427135764,\n        \"ratings_count\": 205,\n        \"responses_count\": 9735\n      }\n    ],\n    \"key_0\": \"string\",\n    \"key_1\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "26ce74cf-3c9e-4fe7-b5c5-df15f7a2904f",
+          "name": "stats surveys read",
+          "request": {
+            "name": "stats surveys read",
+            "description": {},
+            "url": {
+              "path": [
+                "stats",
+                "surveys",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e6d344be-5c71-44c6-982e-4af444d231e8",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "stats",
+                    "surveys",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"key\": \"string\",\n      \"description\": \"string\",\n      \"count\": 3102,\n      \"average\": 8907.800052862667,\n      \"answers\": [\n        {\n          \"count\": 3686,\n          \"percentage\": 5272.03607097647,\n          \"value\": \"string\",\n          \"key_0\": \"string\",\n          \"key_1\": \"string\",\n          \"key_2\": \"string\"\n        },\n        {\n          \"count\": 8000,\n          \"percentage\": 1792.6129136247494,\n          \"value\": \"string\"\n        }\n      ]\n    },\n    {\n      \"key\": \"string\",\n      \"description\": \"string\",\n      \"count\": 4965,\n      \"average\": 2796.1900850631905,\n      \"answers\": [\n        {\n          \"count\": 7388,\n          \"percentage\": 5502.77889244258,\n          \"value\": \"string\"\n        },\n        {\n          \"count\": 3230,\n          \"percentage\": 4625.982715059828,\n          \"value\": \"string\",\n          \"key_0\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"key_0\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.goodays.co/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5190284f-d6fb-4757-97e6-186ddbc917a9",
+    "name": "Goodays core stats API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.",
+      "type": "text/plain"
+    }
+  }
+}
