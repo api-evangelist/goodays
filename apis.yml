@@ -45,6 +45,17 @@ tags:
 - Reviews
 - Retail
 - CRM
+- Software-as-a-Service
+tags_raw:
+- Company
+- Customer Experience
+- Customer Feedback
+- Voice of the Customer
+- Surveys
+- NPS
+- Reviews
+- Retail
+- CRM
 - SaaS
 maintainers:
 - FN: Kin Lane
@@ -58,6 +69,8 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
+  - Core
+  tags_raw:
   - core
   properties:
   - type: OpenAPI
@@ -70,6 +83,8 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
+  - Dashboard
+  tags_raw:
   - dashboard
   properties:
   - type: OpenAPI
@@ -82,6 +97,8 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
+  - Event
+  tags_raw:
   - events
   properties:
   - type: OpenAPI
@@ -94,6 +111,8 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
+  - Response
+  tags_raw:
   - response
   properties:
   - type: OpenAPI
@@ -106,6 +125,8 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
+  - Session
+  tags_raw:
   - session
   properties:
   - type: OpenAPI
@@ -130,6 +151,8 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
+  - Stats
+  tags_raw:
   - stats
   properties:
   - type: OpenAPI
