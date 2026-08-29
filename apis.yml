@@ -172,6 +172,9 @@ apis:
   - type: APIReference
     url: https://apidocs.goodays.co/reference/places_list
 common:
+- type: CapabilityMap
+  url: capabilities/goodays-capability-edges.yml
+  name: Goodays Business Capability Map
 - type: Overlay
   url: overlays/goodays-openapi-overlay.yaml
 - type: DeveloperPortal

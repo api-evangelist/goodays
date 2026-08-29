@@ -1,0 +1,56 @@
+slug: goodays
+provider: Goodays
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Retail & Consumer Goods
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: stats
+  spec_file: goodays-stats-api-openapi.yml
+  capability_id: BC-430.50
+  capability_id_l1: BC-430
+  capability_name: Customer Feedback Management
+  confidence: 0.82
+  evidence: '"stats_nps_list", "stats_satisfaction_list", "stats_dissatisfaction_list", "stats_google_score_list";
+    schemas NpsMetric_read, SatisfactionMetric_read'
+  reason: Reports NPS, satisfaction/dissatisfaction, review and survey metrics — the measurement layer
+    of a surveys/NPS/voice-of-customer programme, matching BC-430.50 directly.
+- tag: response
+  spec_file: goodays-response-api-openapi.yml
+  capability_id: BC-430.50
+  capability_id_l1: BC-430
+  capability_name: Customer Feedback Management
+  confidence: 0.78
+  evidence: '"responses_collect", "responses_reply", "responses_close", "responses_spam"; description:
+    "a Response API to read and reply to customer revie[ws]"'
+  reason: Collects consumer reviews and lets the brand reply, call, message and close them — voice-of-customer/review
+    handling. Slight ambiguity with complaint handling (BC-430.20) keeps this at 0.78.
+- tag: core
+  spec_file: goodays-core-api-openapi.yml
+  capability_id: BC-430.50
+  capability_id_l1: BC-430
+  capability_name: Customer Feedback Management
+  confidence: 0.7
+  evidence: '"places_surveys_list", "places_responses_list", "levels_responses_bulk"; description: "customer
+    reviews (responses)"'
+  reason: Core exposes the place/level/survey hierarchy and the customer review (response) collections
+    of a customer-experience feedback platform, i.e. the structural backbone of voice-of-customer/survey
+    programmes. Somewhat configuration-oriented, hence 0.7.
+- tag: solicitation
+  spec_file: goodays-solicitation-api-openapi.yml
+  capability_id: BC-430.50
+  capability_id_l1: BC-430
+  capability_name: Customer Feedback Management
+  confidence: 0.7
+  evidence: '"solicitations_create", "solicitations_bulk"; description: "solicitations (email/SMS outreach)"'
+  reason: Creates individual and bulk email/SMS outreach to invite customers to give feedback — survey
+    invitation dispatch within a voice-of-customer programme. Could arguably be read as outbound campaign
+    messaging, so 0.7.
