@@ -123,7 +123,7 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
-  - response
+  - Response
   tags_raw:
   - response
   properties:
