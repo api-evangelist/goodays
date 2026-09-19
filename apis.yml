@@ -96,7 +96,7 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
-  - Dashboard
+  - Dashboards
   tags_raw:
   - dashboard
   properties:
@@ -138,7 +138,7 @@ apis:
   humanURL: https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform
   baseURL: https://api.goodays.co/v2
   tags:
-  - Session
+  - Sessions
   tags_raw:
   - session
   properties:
