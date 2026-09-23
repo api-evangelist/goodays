@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Goodays core events API
+  title: Goodays Events API
   description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
   version: v2
 servers:
@@ -8,7 +8,7 @@ servers:
 security:
 - tokenAuth: []
 tags:
-- name: events
+- name: Events
 paths:
   /events:
     get:
@@ -23,7 +23,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Event_read'
       tags:
-      - events
+      - Events
+      summary: Events list
+      x-summary-source: derived
   /events/{id}/sample_delegated:
     get:
       operationId: events_sample_delegated
@@ -42,7 +44,9 @@ paths:
         schema:
           type: string
       tags:
-      - events
+      - Events
+      summary: Events sample delegated
+      x-summary-source: derived
   /events/{id}/sample_message:
     get:
       operationId: events_sample_message
@@ -61,7 +65,9 @@ paths:
         schema:
           type: string
       tags:
-      - events
+      - Events
+      summary: Events sample message
+      x-summary-source: derived
   /events/{id}/sample_reply:
     get:
       operationId: events_sample_reply
@@ -80,7 +86,9 @@ paths:
         schema:
           type: string
       tags:
-      - events
+      - Events
+      summary: Events sample reply
+      x-summary-source: derived
   /events/{id}/sample_response:
     get:
       operationId: events_sample_response
@@ -99,7 +107,9 @@ paths:
         schema:
           type: string
       tags:
-      - events
+      - Events
+      summary: Events sample response
+      x-summary-source: derived
 components:
   schemas:
     Event_read:

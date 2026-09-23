@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Goodays core API
+  title: Goodays Core API
   description: 'Goodays (formerly Critizr) REST API for managing your customer experience environment: places, levels, surveys, users, customer reviews (responses), solicitations (email/SMS outreach), events, and statistics. Reconstructed by API Evangelist from the per-endpoint OpenAPI fragments published on the Goodays ReadMe docs.'
   version: v2
 servers:
@@ -8,7 +8,7 @@ servers:
 security:
 - tokenAuth: []
 tags:
-- name: core
+- name: Core
 paths:
   /configuration:
     get:
@@ -23,7 +23,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/Configuration_read'
       tags:
-      - core
+      - Core
+      summary: Configuration list
+      x-summary-source: derived
   /levels:
     get:
       operationId: levels_list
@@ -62,7 +64,9 @@ paths:
         schema:
           type: number
       tags:
-      - core
+      - Core
+      summary: Levels list
+      x-summary-source: derived
   /levels/{id}:
     get:
       operationId: levels_read
@@ -81,7 +85,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Levels read
+      x-summary-source: derived
   /levels/{level_pk}/places:
     get:
       operationId: levels_places_list
@@ -126,7 +132,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Levels places list
+      x-summary-source: derived
   /levels/{level_pk}/responses:
     get:
       operationId: levels_responses_list
@@ -249,7 +257,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Levels responses list
+      x-summary-source: derived
   /levels/{level_pk}/responses/bulk:
     get:
       operationId: levels_responses_bulk
@@ -268,7 +278,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Levels responses bulk
+      x-summary-source: derived
   /places:
     get:
       operationId: places_list
@@ -307,7 +319,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Places list
+      x-summary-source: derived
   /places/{id}:
     get:
       operationId: places_read
@@ -326,7 +340,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Places read
+      x-summary-source: derived
   /places/{place_pk}/levels:
     get:
       operationId: places_levels_list
@@ -371,7 +387,9 @@ paths:
         schema:
           type: number
       tags:
-      - core
+      - Core
+      summary: Places levels list
+      x-summary-source: derived
   /places/{place_pk}/responses:
     get:
       operationId: places_responses_list
@@ -494,7 +512,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Places responses list
+      x-summary-source: derived
   /places/{place_pk}/responses/bulk:
     get:
       operationId: places_responses_bulk
@@ -513,7 +533,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Places responses bulk
+      x-summary-source: derived
   /places/{place_pk}/surveys:
     get:
       operationId: places_surveys_list
@@ -558,7 +580,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Places surveys list
+      x-summary-source: derived
   /places/{place_pk}/users:
     get:
       operationId: places_users_list
@@ -621,7 +645,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Places users list
+      x-summary-source: derived
   /surveys:
     get:
       operationId: surveys_list
@@ -660,7 +686,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Surveys list
+      x-summary-source: derived
   /surveys/{id}:
     get:
       operationId: surveys_read
@@ -679,7 +707,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Surveys read
+      x-summary-source: derived
   /surveys/{survey_pk}/places:
     get:
       operationId: surveys_places_list
@@ -724,7 +754,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Surveys places list
+      x-summary-source: derived
   /surveys/{survey_pk}/responses:
     get:
       operationId: surveys_responses_list
@@ -847,7 +879,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Surveys responses list
+      x-summary-source: derived
   /surveys/{survey_pk}/responses/bulk:
     get:
       operationId: surveys_responses_bulk
@@ -866,7 +900,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Surveys responses bulk
+      x-summary-source: derived
   /universes:
     get:
       operationId: universes_list
@@ -899,7 +935,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Universes list
+      x-summary-source: derived
   /users:
     get:
       operationId: users_list
@@ -956,7 +994,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Users list
+      x-summary-source: derived
   /users/{id}:
     get:
       operationId: users_read
@@ -975,7 +1015,9 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Users read
+      x-summary-source: derived
   /users/{user_pk}/places:
     get:
       operationId: users_places_list
@@ -1020,9 +1062,60 @@ paths:
         schema:
           type: string
       tags:
-      - core
+      - Core
+      summary: Users places list
+      x-summary-source: derived
 components:
   schemas:
+    Universe_read:
+      type: object
+      properties:
+        id:
+          type: string
+        key:
+          type: string
+        label:
+          type: string
+      additionalProperties:
+        type: string
+    Response_read:
+      type: object
+      properties:
+        id:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        updated_date:
+          type: string
+          format: date-time
+        has_answers:
+          type: boolean
+        has_message:
+          type: boolean
+        has_reply:
+          type: boolean
+        alert_triggered:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    Survey_read:
+      type: object
+      properties:
+        id:
+          type: string
+        slug:
+          type: string
+        label:
+          type: string
+        enabled:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
     Level_read:
       type: object
       properties:
@@ -1036,6 +1129,120 @@ components:
           type: string
         detail_url:
           type: string
+      additionalProperties:
+        type: string
+    Configuration_read:
+      type: object
+      properties:
+        custom_parameters:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              label:
+                type: string
+              required:
+                type: boolean
+              use_in_stats:
+                type: boolean
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    SurveyDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        slug:
+          type: string
+        label:
+          type: string
+        enabled:
+          type: boolean
+        questions:
+          type: string
+        places:
+          type: string
+        responses:
+          type: string
+      additionalProperties:
+        type: string
+    Place_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        name:
+          type: string
+        enabled:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    LevelDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        category_id:
+          type: integer
+        category:
+          type: string
+        name:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        is_active:
+          type: string
+        lang:
+          type: string
+        places:
+          type: string
+        responses:
+          type: string
+      additionalProperties:
+        type: string
+    UserProfile_read:
+      type: object
+      properties:
+        id:
+          type: string
+        email:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        phone:
+          type: string
+        read_only:
+          type: boolean
+        notifications:
+          type: boolean
+        places:
+          type: string
+        last_login:
+          type: string
+          format: date-time
+        lang_training:
+          type: string
+          enum:
+          - fr
+          - en
+          - de
+          - it
+          - es
+          - nl
+          - ja
       additionalProperties:
         type: string
     PlaceDetail_read:
@@ -1075,89 +1282,6 @@ components:
         surveys:
           type: string
         users:
-          type: string
-        responses:
-          type: string
-      additionalProperties:
-        type: string
-    SurveyDetail_read:
-      type: object
-      properties:
-        id:
-          type: string
-        slug:
-          type: string
-        label:
-          type: string
-        enabled:
-          type: boolean
-        questions:
-          type: string
-        places:
-          type: string
-        responses:
-          type: string
-      additionalProperties:
-        type: string
-    Place_read:
-      type: object
-      properties:
-        id:
-          type: string
-        partner_id:
-          type: string
-        name:
-          type: string
-        enabled:
-          type: boolean
-        detail_url:
-          type: string
-      additionalProperties:
-        type: string
-    Response_read:
-      type: object
-      properties:
-        id:
-          type: string
-        created_date:
-          type: string
-          format: date-time
-        updated_date:
-          type: string
-          format: date-time
-        has_answers:
-          type: boolean
-        has_message:
-          type: boolean
-        has_reply:
-          type: boolean
-        alert_triggered:
-          type: boolean
-        detail_url:
-          type: string
-      additionalProperties:
-        type: string
-    LevelDetail_read:
-      type: object
-      properties:
-        id:
-          type: string
-        partner_id:
-          type: string
-        category_id:
-          type: integer
-        category:
-          type: string
-        name:
-          type: string
-        created_date:
-          type: string
-          format: date-time
-        is_active:
-          type: string
-        lang:
-          type: string
-        places:
           type: string
         responses:
           type: string
@@ -1423,86 +1547,6 @@ components:
             type: string
         alert_triggered:
           type: boolean
-      additionalProperties:
-        type: string
-    Universe_read:
-      type: object
-      properties:
-        id:
-          type: string
-        key:
-          type: string
-        label:
-          type: string
-      additionalProperties:
-        type: string
-    UserProfile_read:
-      type: object
-      properties:
-        id:
-          type: string
-        email:
-          type: string
-        first_name:
-          type: string
-        last_name:
-          type: string
-        phone:
-          type: string
-        read_only:
-          type: boolean
-        notifications:
-          type: boolean
-        places:
-          type: string
-        last_login:
-          type: string
-          format: date-time
-        lang_training:
-          type: string
-          enum:
-          - fr
-          - en
-          - de
-          - it
-          - es
-          - nl
-          - ja
-      additionalProperties:
-        type: string
-    Configuration_read:
-      type: object
-      properties:
-        custom_parameters:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              label:
-                type: string
-              required:
-                type: boolean
-              use_in_stats:
-                type: boolean
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
-    Survey_read:
-      type: object
-      properties:
-        id:
-          type: string
-        slug:
-          type: string
-        label:
-          type: string
-        enabled:
-          type: boolean
-        detail_url:
-          type: string
       additionalProperties:
         type: string
   securitySchemes:

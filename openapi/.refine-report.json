@@ -1,13 +1,7 @@
 {
   "provider": "goodays",
   "sources": [
-    "goodays-core-api-openapi.yml",
-    "goodays-dashboard-api-openapi.yml",
-    "goodays-events-api-openapi.yml",
-    "goodays-response-api-openapi.yml",
-    "goodays-session-api-openapi.yml",
-    "goodays-solicitation-api-openapi.yml",
-    "goodays-stats-api-openapi.yml"
+    "_original/goodays-openapi-original.json"
   ],
   "outputs": [
     "goodays-core-api-openapi.yml",
@@ -20,10 +14,29 @@
   ],
   "archived": [],
   "errors": [
-    "goodays-response-api-openapi.yml: dangling $ref: #/components/requestBodies/levels_responses_collectData",
-    "goodays-response-api-openapi.yml: dangling $ref: #/components/requestBodies/responses_closeData"
+    "goodays-openapi-original.json: dangling $ref: #/components/requestBodies/levels_responses_collectData",
+    "goodays-openapi-original.json: dangling $ref: #/components/requestBodies/responses_closeData"
   ],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "goodays-openapi-original.json: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "goodays-openapi-original.json: declared missing tag: core",
+    "goodays-openapi-original.json: declared missing tag: dashboard",
+    "goodays-openapi-original.json: declared missing tag: events",
+    "goodays-openapi-original.json: declared missing tag: response",
+    "goodays-openapi-original.json: declared missing tag: session",
+    "goodays-openapi-original.json: declared missing tag: solicitation",
+    "goodays-openapi-original.json: declared missing tag: stats",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "goodays-core-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodays-dashboard-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodays-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodays-response-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodays-session-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodays-solicitation-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "goodays-stats-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
