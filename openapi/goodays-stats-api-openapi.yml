@@ -976,7 +976,7 @@ components:
               type: string
       additionalProperties:
         type: string
-    NpsMetric_read:
+    SatisfactionMetric_read:
       type: object
       properties:
         data:
@@ -988,37 +988,36 @@ components:
                 type: string
               description:
                 type: string
-              count:
+              average:
+                type: number
+              ratings_count:
                 type: integer
-              score:
+              responses_count:
                 type: integer
-              detractor:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              passive:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              promoter:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    RelationshipMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              reply_rate:
+                type: number
+              reply_time:
+                type: integer
+              reply_quality:
+                type: number
+              customer_service_rating:
+                type: number
             additionalProperties:
               type: string
       additionalProperties:
@@ -1088,75 +1087,7 @@ components:
               type: string
       additionalProperties:
         type: string
-    RetainedCustomersMetric_read:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              description:
-                type: string
-              retained_customers_count:
-                type: integer
-              retained_customers_percentage:
-                type: number
-              customers_responding_count:
-                type: integer
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
-    RelationshipMetric_read:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              description:
-                type: string
-              reply_rate:
-                type: number
-              reply_time:
-                type: integer
-              reply_quality:
-                type: number
-              customer_service_rating:
-                type: number
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
-    SatisfactionMetric_read:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              description:
-                type: string
-              average:
-                type: number
-              ratings_count:
-                type: integer
-              responses_count:
-                type: integer
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
-    SurveyMetricDetail_read:
+    NpsMetric_read:
       type: object
       properties:
         data:
@@ -1170,21 +1101,35 @@ components:
                 type: string
               count:
                 type: integer
-              average:
-                type: number
-              answers:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    count:
-                      type: integer
-                    percentage:
-                      type: number
-                    value:
-                      type: string
-                  additionalProperties:
-                    type: string
+              score:
+                type: integer
+              detractor:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              passive:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              promoter:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
             additionalProperties:
               type: string
       additionalProperties:
@@ -1248,6 +1193,61 @@ components:
                     type: number
                 additionalProperties:
                   type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    SurveyMetricDetail_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              count:
+                type: integer
+              average:
+                type: number
+              answers:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    count:
+                      type: integer
+                    percentage:
+                      type: number
+                    value:
+                      type: string
+                  additionalProperties:
+                    type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    RetainedCustomersMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              retained_customers_count:
+                type: integer
+              retained_customers_percentage:
+                type: number
+              customers_responding_count:
+                type: integer
             additionalProperties:
               type: string
       additionalProperties:

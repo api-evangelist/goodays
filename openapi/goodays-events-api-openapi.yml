@@ -112,13 +112,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    Event_read:
-      type: object
-      properties:
-        samples:
-          type: string
-      additionalProperties:
-        type: string
     EventSampleMessage_read:
       type: object
       properties:
@@ -420,6 +413,13 @@ components:
                 type: string
           additionalProperties:
             type: string
+      additionalProperties:
+        type: string
+    Event_read:
+      type: object
+      properties:
+        samples:
+          type: string
       additionalProperties:
         type: string
     EventSampleResponse_read:
