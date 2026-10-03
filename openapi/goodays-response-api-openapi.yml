@@ -352,60 +352,221 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    ResponseActionReply_read:
+    ResponseActionMessage_read:
       type: object
       properties:
         user:
           type: string
         content:
           type: string
-        remark_type:
-          type: string
-          enum:
-          - Question
-          - Idea
-          - Problem
-          - Praise
-          - Message
-          - NoType
       additionalProperties:
         type: string
-    ResponseActionClose_read:
+    ResponseBatchEntryCreate_write:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+        user:
+          type: object
+          properties:
+            email:
+              type: string
+            first_name:
+              type: string
+            last_name:
+              type: string
+            phone:
+              type: string
+            crm_id:
+              type: string
+          additionalProperties:
+            type: string
+        context:
+          type: object
+          additionalProperties:
+            type: string
+        place:
+          type: string
+        survey:
+          type: string
+        drop_invalid_facultative_answers:
+          type: boolean
+        answers:
+          type: array
+          items:
+            type: object
+            properties:
+              question:
+                type: string
+              value:
+                type: string
+            additionalProperties:
+              type: string
+        medium:
+          type: string
+          enum:
+          - API
+          - FB
+          - MER
+          - MOB
+          - OC
+          - QR
+          - REC
+          - SMC
+          - SMS
+          - TE
+          - TMC
+          - TRM
+          - TS
+          - WA
+          - WEB
+          - WI
+        message:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - Question
+              - Idea
+              - Problem
+              - Praise
+              - Message
+              - NoType
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        collect_uid:
+          type: string
+      additionalProperties:
+        type: string
+    ResponseActionCall_read:
       type: object
       properties:
         user:
           type: string
-        remark_type:
+        note:
           type: string
-          enum:
-          - Question
-          - Idea
-          - Problem
-          - Praise
-          - Message
-          - NoType
+        rating:
+          type: integer
       additionalProperties:
         type: string
-    Response_read:
+    ResponseCollect_write:
       type: object
       properties:
-        id:
-          type: string
-        created_date:
+        date:
           type: string
           format: date-time
-        updated_date:
+        user:
+          type: object
+          properties:
+            email:
+              type: string
+            first_name:
+              type: string
+            last_name:
+              type: string
+            phone:
+              type: string
+            crm_id:
+              type: string
+          additionalProperties:
+            type: string
+        context:
+          type: object
+          additionalProperties:
+            type: string
+        place:
           type: string
-          format: date-time
-        has_answers:
+        survey:
+          type: string
+        drop_invalid_facultative_answers:
           type: boolean
-        has_message:
-          type: boolean
-        has_reply:
-          type: boolean
-        alert_triggered:
-          type: boolean
-        detail_url:
+        answers:
+          type: array
+          items:
+            type: object
+            properties:
+              question:
+                type: string
+              value:
+                type: string
+            additionalProperties:
+              type: string
+        medium:
+          type: string
+          enum:
+          - API
+          - FB
+          - MER
+          - MOB
+          - OC
+          - QR
+          - REC
+          - SMC
+          - SMS
+          - TE
+          - TMC
+          - TRM
+          - TS
+          - WA
+          - WEB
+          - WI
+        message:
+          type: object
+          properties:
+            id:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            type:
+              type: string
+              enum:
+              - Question
+              - Idea
+              - Problem
+              - Praise
+              - Message
+              - NoType
+            content:
+              type: string
+            attachment:
+              type: string
+            sender:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+              additionalProperties:
+                type: string
+          additionalProperties:
+            type: string
+        collect_uid:
           type: string
       additionalProperties:
         type: string
@@ -671,123 +832,61 @@ components:
           type: boolean
       additionalProperties:
         type: string
-    ResponseBatchEntryCreate_write:
-      type: object
-      properties:
-        date:
-          type: string
-          format: date-time
-        user:
-          type: object
-          properties:
-            email:
-              type: string
-            first_name:
-              type: string
-            last_name:
-              type: string
-            phone:
-              type: string
-            crm_id:
-              type: string
-          additionalProperties:
-            type: string
-        context:
-          type: object
-          additionalProperties:
-            type: string
-        place:
-          type: string
-        survey:
-          type: string
-        drop_invalid_facultative_answers:
-          type: boolean
-        answers:
-          type: array
-          items:
-            type: object
-            properties:
-              question:
-                type: string
-              value:
-                type: string
-            additionalProperties:
-              type: string
-        medium:
-          type: string
-          enum:
-          - API
-          - FB
-          - MER
-          - MOB
-          - OC
-          - QR
-          - REC
-          - SMC
-          - SMS
-          - TE
-          - TMC
-          - TRM
-          - TS
-          - WA
-          - WEB
-          - WI
-        message:
-          type: object
-          properties:
-            id:
-              type: string
-            created_date:
-              type: string
-              format: date-time
-            type:
-              type: string
-              enum:
-              - Question
-              - Idea
-              - Problem
-              - Praise
-              - Message
-              - NoType
-            content:
-              type: string
-            attachment:
-              type: string
-            sender:
-              type: object
-              properties:
-                email:
-                  type: string
-                first_name:
-                  type: string
-                last_name:
-                  type: string
-              additionalProperties:
-                type: string
-          additionalProperties:
-            type: string
-        collect_uid:
-          type: string
-      additionalProperties:
-        type: string
-    ResponseActionCall_read:
-      type: object
-      properties:
-        user:
-          type: string
-        note:
-          type: string
-        rating:
-          type: integer
-      additionalProperties:
-        type: string
-    ResponseActionMessage_read:
+    ResponseActionReply_read:
       type: object
       properties:
         user:
           type: string
         content:
           type: string
+        remark_type:
+          type: string
+          enum:
+          - Question
+          - Idea
+          - Problem
+          - Praise
+          - Message
+          - NoType
+      additionalProperties:
+        type: string
+    Response_read:
+      type: object
+      properties:
+        id:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        updated_date:
+          type: string
+          format: date-time
+        has_answers:
+          type: boolean
+        has_message:
+          type: boolean
+        has_reply:
+          type: boolean
+        alert_triggered:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    ResponseActionClose_read:
+      type: object
+      properties:
+        user:
+          type: string
+        remark_type:
+          type: string
+          enum:
+          - Question
+          - Idea
+          - Problem
+          - Praise
+          - Message
+          - NoType
       additionalProperties:
         type: string
     ResponseActionSpam_read:
@@ -804,105 +903,6 @@ components:
           - Praise
           - Message
           - NoType
-      additionalProperties:
-        type: string
-    ResponseCollect_write:
-      type: object
-      properties:
-        date:
-          type: string
-          format: date-time
-        user:
-          type: object
-          properties:
-            email:
-              type: string
-            first_name:
-              type: string
-            last_name:
-              type: string
-            phone:
-              type: string
-            crm_id:
-              type: string
-          additionalProperties:
-            type: string
-        context:
-          type: object
-          additionalProperties:
-            type: string
-        place:
-          type: string
-        survey:
-          type: string
-        drop_invalid_facultative_answers:
-          type: boolean
-        answers:
-          type: array
-          items:
-            type: object
-            properties:
-              question:
-                type: string
-              value:
-                type: string
-            additionalProperties:
-              type: string
-        medium:
-          type: string
-          enum:
-          - API
-          - FB
-          - MER
-          - MOB
-          - OC
-          - QR
-          - REC
-          - SMC
-          - SMS
-          - TE
-          - TMC
-          - TRM
-          - TS
-          - WA
-          - WEB
-          - WI
-        message:
-          type: object
-          properties:
-            id:
-              type: string
-            created_date:
-              type: string
-              format: date-time
-            type:
-              type: string
-              enum:
-              - Question
-              - Idea
-              - Problem
-              - Praise
-              - Message
-              - NoType
-            content:
-              type: string
-            attachment:
-              type: string
-            sender:
-              type: object
-              properties:
-                email:
-                  type: string
-                first_name:
-                  type: string
-                last_name:
-                  type: string
-              additionalProperties:
-                type: string
-          additionalProperties:
-            type: string
-        collect_uid:
-          type: string
       additionalProperties:
         type: string
   securitySchemes:
