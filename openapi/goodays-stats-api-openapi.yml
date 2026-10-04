@@ -931,7 +931,7 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    DissatisfactionMetric_read:
+    SurveyMetricDetail_read:
       type: object
       properties:
         data:
@@ -945,9 +945,85 @@ components:
                 type: string
               count:
                 type: integer
-              percentage:
+              average:
                 type: number
-              pending:
+              answers:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    count:
+                      type: integer
+                    percentage:
+                      type: number
+                    value:
+                      type: string
+                  additionalProperties:
+                    type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    GoogleScoreMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              public_rating:
+                type: number
+              public_rating_count:
+                type: integer
+              places_count:
+                type: integer
+              monthly_rating:
+                type: number
+              monthly_rating_count:
+                type: integer
+              action_phone_count:
+                type: integer
+              action_website_count:
+                type: integer
+              itinerary_count:
+                type: integer
+              views_count:
+                type: integer
+              rating_distribution:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    value:
+                      type: integer
+                    count:
+                      type: integer
+                  additionalProperties:
+                    type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    RemarksMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              count:
+                type: integer
+              Idea:
                 type: object
                 properties:
                   count:
@@ -956,7 +1032,7 @@ components:
                     type: number
                 additionalProperties:
                   type: string
-              spam:
+              Message:
                 type: object
                 properties:
                   count:
@@ -965,7 +1041,7 @@ components:
                     type: number
                 additionalProperties:
                   type: string
-              ignored:
+              Praise:
                 type: object
                 properties:
                   count:
@@ -974,7 +1050,7 @@ components:
                     type: number
                 additionalProperties:
                   type: string
-              call:
+              Problem:
                 type: object
                 properties:
                   count:
@@ -983,7 +1059,7 @@ components:
                     type: number
                 additionalProperties:
                   type: string
-              text:
+              Question:
                 type: object
                 properties:
                   count:
@@ -992,6 +1068,30 @@ components:
                     type: number
                 additionalProperties:
                   type: string
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    RelationshipMetric_read:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              description:
+                type: string
+              reply_rate:
+                type: number
+              reply_time:
+                type: integer
+              reply_quality:
+                type: number
+              customer_service_rating:
+                type: number
             additionalProperties:
               type: string
       additionalProperties:
@@ -1065,126 +1165,6 @@ components:
               type: string
       additionalProperties:
         type: string
-    SurveyMetricDetail_read:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              description:
-                type: string
-              count:
-                type: integer
-              average:
-                type: number
-              answers:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    count:
-                      type: integer
-                    percentage:
-                      type: number
-                    value:
-                      type: string
-                  additionalProperties:
-                    type: string
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
-    RelationshipMetric_read:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              description:
-                type: string
-              reply_rate:
-                type: number
-              reply_time:
-                type: integer
-              reply_quality:
-                type: number
-              customer_service_rating:
-                type: number
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
-    RemarksMetric_read:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              description:
-                type: string
-              count:
-                type: integer
-              Idea:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              Message:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              Praise:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              Problem:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              Question:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
     RetainedCustomersMetric_read:
       type: object
       properties:
@@ -1207,7 +1187,7 @@ components:
               type: string
       additionalProperties:
         type: string
-    GoogleScoreMetric_read:
+    DissatisfactionMetric_read:
       type: object
       properties:
         data:
@@ -1219,35 +1199,55 @@ components:
                 type: string
               description:
                 type: string
-              public_rating:
+              count:
+                type: integer
+              percentage:
                 type: number
-              public_rating_count:
-                type: integer
-              places_count:
-                type: integer
-              monthly_rating:
-                type: number
-              monthly_rating_count:
-                type: integer
-              action_phone_count:
-                type: integer
-              action_website_count:
-                type: integer
-              itinerary_count:
-                type: integer
-              views_count:
-                type: integer
-              rating_distribution:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    value:
-                      type: integer
-                    count:
-                      type: integer
-                  additionalProperties:
-                    type: string
+              pending:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              spam:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              ignored:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              call:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              text:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
             additionalProperties:
               type: string
       additionalProperties:

@@ -1067,60 +1067,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    Survey_read:
-      type: object
-      properties:
-        id:
-          type: string
-        slug:
-          type: string
-        label:
-          type: string
-        enabled:
-          type: boolean
-        detail_url:
-          type: string
-      additionalProperties:
-        type: string
-    SurveyDetail_read:
-      type: object
-      properties:
-        id:
-          type: string
-        slug:
-          type: string
-        label:
-          type: string
-        enabled:
-          type: boolean
-        questions:
-          type: string
-        places:
-          type: string
-        responses:
-          type: string
-      additionalProperties:
-        type: string
-    Configuration_read:
-      type: object
-      properties:
-        custom_parameters:
-          type: array
-          items:
-            type: object
-            properties:
-              key:
-                type: string
-              label:
-                type: string
-              required:
-                type: boolean
-              use_in_stats:
-                type: boolean
-            additionalProperties:
-              type: string
-      additionalProperties:
-        type: string
     UserProfile_read:
       type: object
       properties:
@@ -1155,45 +1101,48 @@ components:
           - ja
       additionalProperties:
         type: string
-    PlaceDetail_read:
+    SurveyDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        slug:
+          type: string
+        label:
+          type: string
+        enabled:
+          type: boolean
+        questions:
+          type: string
+        places:
+          type: string
+        responses:
+          type: string
+      additionalProperties:
+        type: string
+    Place_read:
       type: object
       properties:
         id:
           type: string
         partner_id:
           type: string
-        universe:
-          type: string
         name:
           type: string
-        street:
-          type: string
-        postal_code:
-          type: string
-        city:
-          type: string
-        phone:
-          type: string
-        latitude:
-          type: number
-        longitude:
-          type: number
-        lang:
-          type: string
-        is_active:
+        enabled:
           type: boolean
-        created_date:
+        detail_url:
           type: string
-          format: date-time
-        logo:
+      additionalProperties:
+        type: string
+    Universe_read:
+      type: object
+      properties:
+        id:
           type: string
-        levels:
+        key:
           type: string
-        surveys:
-          type: string
-        users:
-          type: string
-        responses:
+        label:
           type: string
       additionalProperties:
         type: string
@@ -1459,62 +1408,6 @@ components:
           type: boolean
       additionalProperties:
         type: string
-    LevelDetail_read:
-      type: object
-      properties:
-        id:
-          type: string
-        partner_id:
-          type: string
-        category_id:
-          type: integer
-        category:
-          type: string
-        name:
-          type: string
-        created_date:
-          type: string
-          format: date-time
-        is_active:
-          type: string
-        lang:
-          type: string
-        places:
-          type: string
-        responses:
-          type: string
-      additionalProperties:
-        type: string
-    Level_read:
-      type: object
-      properties:
-        id:
-          type: string
-        partner_id:
-          type: string
-        category_id:
-          type: integer
-        name:
-          type: string
-        detail_url:
-          type: string
-      additionalProperties:
-        type: string
-    Place_read:
-      type: object
-      properties:
-        id:
-          type: string
-        partner_id:
-          type: string
-        name:
-          type: string
-        enabled:
-          type: boolean
-        detail_url:
-          type: string
-      additionalProperties:
-        type: string
     Response_read:
       type: object
       properties:
@@ -1538,14 +1431,121 @@ components:
           type: string
       additionalProperties:
         type: string
-    Universe_read:
+    Level_read:
       type: object
       properties:
         id:
           type: string
-        key:
+        partner_id:
+          type: string
+        category_id:
+          type: integer
+        name:
+          type: string
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    Configuration_read:
+      type: object
+      properties:
+        custom_parameters:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              label:
+                type: string
+              required:
+                type: boolean
+              use_in_stats:
+                type: boolean
+            additionalProperties:
+              type: string
+      additionalProperties:
+        type: string
+    PlaceDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        universe:
+          type: string
+        name:
+          type: string
+        street:
+          type: string
+        postal_code:
+          type: string
+        city:
+          type: string
+        phone:
+          type: string
+        latitude:
+          type: number
+        longitude:
+          type: number
+        lang:
+          type: string
+        is_active:
+          type: boolean
+        created_date:
+          type: string
+          format: date-time
+        logo:
+          type: string
+        levels:
+          type: string
+        surveys:
+          type: string
+        users:
+          type: string
+        responses:
+          type: string
+      additionalProperties:
+        type: string
+    Survey_read:
+      type: object
+      properties:
+        id:
+          type: string
+        slug:
           type: string
         label:
+          type: string
+        enabled:
+          type: boolean
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    LevelDetail_read:
+      type: object
+      properties:
+        id:
+          type: string
+        partner_id:
+          type: string
+        category_id:
+          type: integer
+        category:
+          type: string
+        name:
+          type: string
+        created_date:
+          type: string
+          format: date-time
+        is_active:
+          type: string
+        lang:
+          type: string
+        places:
+          type: string
+        responses:
           type: string
       additionalProperties:
         type: string

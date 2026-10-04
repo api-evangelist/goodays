@@ -112,6 +112,282 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    Event_read:
+      type: object
+      properties:
+        samples:
+          type: string
+      additionalProperties:
+        type: string
+    EventSampleResponse_read:
+      type: object
+      properties:
+        event_type:
+          type: string
+        response:
+          type: object
+          properties:
+            id:
+              type: string
+            token:
+              type: string
+            created_date:
+              type: string
+              format: date-time
+            updated_date:
+              type: string
+              format: date-time
+            source:
+              type: string
+              enum:
+              - email
+              - sms_trans
+              - sms_conv
+              - sms_text
+              - plv
+              - receipt
+              - google
+              - google_messaging
+              - critizr
+              - tripadvisor
+              - pagesjaunes
+              - sdk
+              - facebook
+              - facebook_reviews
+              - facebook_messenger
+              - widget
+              - terminal
+              - outbound_call
+              - wifi
+              - sms
+              - api
+              - undefined
+              - merci
+              - google_play_store
+              - apple_app_store
+              - uber_eats
+              - whatsapp
+            survey:
+              type: object
+              properties:
+                id:
+                  type: string
+                slug:
+                  type: string
+                label:
+                  type: string
+                enabled:
+                  type: boolean
+                detail_url:
+                  type: string
+              additionalProperties:
+                type: string
+            answers:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  value:
+                    type: string
+                  question:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      title:
+                        type: string
+                      type:
+                        type: string
+                        enum:
+                        - none
+                        - stars
+                        - yesno
+                        - choices
+                        - nps
+                        - emoji
+                        - text
+                        - multiple_answers
+                        - csat
+                      enabled:
+                        type: boolean
+                    additionalProperties:
+                      type: string
+                additionalProperties:
+                  type: string
+            message:
+              type: object
+              properties:
+                id:
+                  type: string
+                created_date:
+                  type: string
+                  format: date-time
+                type:
+                  type: string
+                  enum:
+                  - Question
+                  - Idea
+                  - Problem
+                  - Praise
+                  - Message
+                  - NoType
+                content:
+                  type: string
+                attachment:
+                  type: string
+                sender:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    first_name:
+                      type: string
+                    last_name:
+                      type: string
+                  additionalProperties:
+                    type: string
+              additionalProperties:
+                type: string
+            reply:
+              type: object
+              properties:
+                id:
+                  type: string
+                created_date:
+                  type: string
+                  format: date-time
+                type:
+                  type: string
+                  enum:
+                  - call
+                  - text
+                content:
+                  type: string
+                attachment:
+                  type: string
+                sender:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    first_name:
+                      type: string
+                    last_name:
+                      type: string
+                  additionalProperties:
+                    type: string
+              additionalProperties:
+                type: string
+            user:
+              type: object
+              properties:
+                email:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                opt_in:
+                  type: object
+                  properties:
+                    newsletter:
+                      type: boolean
+                    email:
+                      type: boolean
+                    sms:
+                      type: boolean
+                  additionalProperties:
+                    type: string
+              additionalProperties:
+                type: string
+            context:
+              type: string
+            place:
+              type: object
+              properties:
+                id:
+                  type: string
+                partner_id:
+                  type: string
+                name:
+                  type: string
+                enabled:
+                  type: boolean
+                detail_url:
+                  type: string
+              additionalProperties:
+                type: string
+            delegated_to:
+              type: object
+              properties:
+                id:
+                  type: string
+                partner_id:
+                  type: string
+                name:
+                  type: string
+                enabled:
+                  type: boolean
+                detail_url:
+                  type: string
+              additionalProperties:
+                type: string
+            attached_messages:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  created_date:
+                    type: string
+                    format: date-time
+                  type:
+                    type: string
+                    enum:
+                    - Question
+                    - Idea
+                    - Problem
+                    - Praise
+                    - Message
+                    - NoType
+                  content:
+                    type: string
+                  attachment:
+                    type: string
+                  sender:
+                    type: object
+                    properties:
+                      email:
+                        type: string
+                      first_name:
+                        type: string
+                      last_name:
+                        type: string
+                    additionalProperties:
+                      type: string
+                additionalProperties:
+                  type: string
+            state:
+              type: string
+              enum:
+              - open
+              - closed
+              - spam
+            thread:
+              type: string
+            actions:
+              type: object
+              additionalProperties:
+                type: string
+            alert_triggered:
+              type: boolean
+          additionalProperties:
+            type: string
+      additionalProperties:
+        type: string
     EventSampleMessage_read:
       type: object
       properties:
@@ -411,282 +687,6 @@ components:
                   type: string
               additionalProperties:
                 type: string
-          additionalProperties:
-            type: string
-      additionalProperties:
-        type: string
-    Event_read:
-      type: object
-      properties:
-        samples:
-          type: string
-      additionalProperties:
-        type: string
-    EventSampleResponse_read:
-      type: object
-      properties:
-        event_type:
-          type: string
-        response:
-          type: object
-          properties:
-            id:
-              type: string
-            token:
-              type: string
-            created_date:
-              type: string
-              format: date-time
-            updated_date:
-              type: string
-              format: date-time
-            source:
-              type: string
-              enum:
-              - email
-              - sms_trans
-              - sms_conv
-              - sms_text
-              - plv
-              - receipt
-              - google
-              - google_messaging
-              - critizr
-              - tripadvisor
-              - pagesjaunes
-              - sdk
-              - facebook
-              - facebook_reviews
-              - facebook_messenger
-              - widget
-              - terminal
-              - outbound_call
-              - wifi
-              - sms
-              - api
-              - undefined
-              - merci
-              - google_play_store
-              - apple_app_store
-              - uber_eats
-              - whatsapp
-            survey:
-              type: object
-              properties:
-                id:
-                  type: string
-                slug:
-                  type: string
-                label:
-                  type: string
-                enabled:
-                  type: boolean
-                detail_url:
-                  type: string
-              additionalProperties:
-                type: string
-            answers:
-              type: array
-              items:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  value:
-                    type: string
-                  question:
-                    type: object
-                    properties:
-                      id:
-                        type: string
-                      title:
-                        type: string
-                      type:
-                        type: string
-                        enum:
-                        - none
-                        - stars
-                        - yesno
-                        - choices
-                        - nps
-                        - emoji
-                        - text
-                        - multiple_answers
-                        - csat
-                      enabled:
-                        type: boolean
-                    additionalProperties:
-                      type: string
-                additionalProperties:
-                  type: string
-            message:
-              type: object
-              properties:
-                id:
-                  type: string
-                created_date:
-                  type: string
-                  format: date-time
-                type:
-                  type: string
-                  enum:
-                  - Question
-                  - Idea
-                  - Problem
-                  - Praise
-                  - Message
-                  - NoType
-                content:
-                  type: string
-                attachment:
-                  type: string
-                sender:
-                  type: object
-                  properties:
-                    email:
-                      type: string
-                    first_name:
-                      type: string
-                    last_name:
-                      type: string
-                  additionalProperties:
-                    type: string
-              additionalProperties:
-                type: string
-            reply:
-              type: object
-              properties:
-                id:
-                  type: string
-                created_date:
-                  type: string
-                  format: date-time
-                type:
-                  type: string
-                  enum:
-                  - call
-                  - text
-                content:
-                  type: string
-                attachment:
-                  type: string
-                sender:
-                  type: object
-                  properties:
-                    email:
-                      type: string
-                    first_name:
-                      type: string
-                    last_name:
-                      type: string
-                  additionalProperties:
-                    type: string
-              additionalProperties:
-                type: string
-            user:
-              type: object
-              properties:
-                email:
-                  type: string
-                first_name:
-                  type: string
-                last_name:
-                  type: string
-                opt_in:
-                  type: object
-                  properties:
-                    newsletter:
-                      type: boolean
-                    email:
-                      type: boolean
-                    sms:
-                      type: boolean
-                  additionalProperties:
-                    type: string
-              additionalProperties:
-                type: string
-            context:
-              type: string
-            place:
-              type: object
-              properties:
-                id:
-                  type: string
-                partner_id:
-                  type: string
-                name:
-                  type: string
-                enabled:
-                  type: boolean
-                detail_url:
-                  type: string
-              additionalProperties:
-                type: string
-            delegated_to:
-              type: object
-              properties:
-                id:
-                  type: string
-                partner_id:
-                  type: string
-                name:
-                  type: string
-                enabled:
-                  type: boolean
-                detail_url:
-                  type: string
-              additionalProperties:
-                type: string
-            attached_messages:
-              type: array
-              items:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  created_date:
-                    type: string
-                    format: date-time
-                  type:
-                    type: string
-                    enum:
-                    - Question
-                    - Idea
-                    - Problem
-                    - Praise
-                    - Message
-                    - NoType
-                  content:
-                    type: string
-                  attachment:
-                    type: string
-                  sender:
-                    type: object
-                    properties:
-                      email:
-                        type: string
-                      first_name:
-                        type: string
-                      last_name:
-                        type: string
-                    additionalProperties:
-                      type: string
-                additionalProperties:
-                  type: string
-            state:
-              type: string
-              enum:
-              - open
-              - closed
-              - spam
-            thread:
-              type: string
-            actions:
-              type: object
-              additionalProperties:
-                type: string
-            alert_triggered:
-              type: boolean
           additionalProperties:
             type: string
       additionalProperties:

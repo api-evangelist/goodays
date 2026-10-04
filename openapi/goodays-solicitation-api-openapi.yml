@@ -186,28 +186,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    SolicitationCreate_write:
-      type: object
-      properties:
-        place:
-          type: string
-        type:
-          type: string
-          enum:
-          - email
-          - sms
-        survey:
-          type: string
-        sender:
-          type: string
-        recipient:
-          type: string
-        context:
-          type: object
-          additionalProperties:
-            type: string
-      additionalProperties:
-        type: string
     SolicitationBulkCreate_write:
       type: object
       properties:
@@ -235,33 +213,6 @@ components:
                   type: string
             additionalProperties:
               type: string
-      additionalProperties:
-        type: string
-    Solicitation_read:
-      type: object
-      properties:
-        id:
-          type: string
-        date:
-          type: string
-          format: date-time
-        place:
-          type: object
-          properties:
-            id:
-              type: string
-            partner_id:
-              type: string
-            name:
-              type: string
-            enabled:
-              type: boolean
-            detail_url:
-              type: string
-          additionalProperties:
-            type: string
-        detail_url:
-          type: string
       additionalProperties:
         type: string
     SolicitationDetail_read:
@@ -299,6 +250,55 @@ components:
           type: string
         context:
           type: string
+      additionalProperties:
+        type: string
+    Solicitation_read:
+      type: object
+      properties:
+        id:
+          type: string
+        date:
+          type: string
+          format: date-time
+        place:
+          type: object
+          properties:
+            id:
+              type: string
+            partner_id:
+              type: string
+            name:
+              type: string
+            enabled:
+              type: boolean
+            detail_url:
+              type: string
+          additionalProperties:
+            type: string
+        detail_url:
+          type: string
+      additionalProperties:
+        type: string
+    SolicitationCreate_write:
+      type: object
+      properties:
+        place:
+          type: string
+        type:
+          type: string
+          enum:
+          - email
+          - sms
+        survey:
+          type: string
+        sender:
+          type: string
+        recipient:
+          type: string
+        context:
+          type: object
+          additionalProperties:
+            type: string
       additionalProperties:
         type: string
   securitySchemes:

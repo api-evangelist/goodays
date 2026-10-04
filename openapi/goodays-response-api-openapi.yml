@@ -352,16 +352,41 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    ResponseActionMessage_read:
+    ResponseActionSpam_read:
+      type: object
+      properties:
+        user:
+          type: string
+        remark_type:
+          type: string
+          enum:
+          - Question
+          - Idea
+          - Problem
+          - Praise
+          - Message
+          - NoType
+      additionalProperties:
+        type: string
+    ResponseActionReply_read:
       type: object
       properties:
         user:
           type: string
         content:
           type: string
+        remark_type:
+          type: string
+          enum:
+          - Question
+          - Idea
+          - Problem
+          - Praise
+          - Message
+          - NoType
       additionalProperties:
         type: string
-    ResponseBatchEntryCreate_write:
+    ResponseCollect_write:
       type: object
       properties:
         date:
@@ -460,18 +485,7 @@ components:
           type: string
       additionalProperties:
         type: string
-    ResponseActionCall_read:
-      type: object
-      properties:
-        user:
-          type: string
-        note:
-          type: string
-        rating:
-          type: integer
-      additionalProperties:
-        type: string
-    ResponseCollect_write:
+    ResponseBatchEntryCreate_write:
       type: object
       properties:
         date:
@@ -832,24 +846,6 @@ components:
           type: boolean
       additionalProperties:
         type: string
-    ResponseActionReply_read:
-      type: object
-      properties:
-        user:
-          type: string
-        content:
-          type: string
-        remark_type:
-          type: string
-          enum:
-          - Question
-          - Idea
-          - Problem
-          - Praise
-          - Message
-          - NoType
-      additionalProperties:
-        type: string
     Response_read:
       type: object
       properties:
@@ -889,20 +885,24 @@ components:
           - NoType
       additionalProperties:
         type: string
-    ResponseActionSpam_read:
+    ResponseActionMessage_read:
       type: object
       properties:
         user:
           type: string
-        remark_type:
+        content:
           type: string
-          enum:
-          - Question
-          - Idea
-          - Problem
-          - Praise
-          - Message
-          - NoType
+      additionalProperties:
+        type: string
+    ResponseActionCall_read:
+      type: object
+      properties:
+        user:
+          type: string
+        note:
+          type: string
+        rating:
+          type: integer
       additionalProperties:
         type: string
   securitySchemes:
