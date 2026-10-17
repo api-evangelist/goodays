@@ -964,7 +964,7 @@ components:
               type: string
       additionalProperties:
         type: string
-    GoogleScoreMetric_read:
+    RelationshipMetric_read:
       type: object
       properties:
         data:
@@ -976,35 +976,14 @@ components:
                 type: string
               description:
                 type: string
-              public_rating:
+              reply_rate:
                 type: number
-              public_rating_count:
+              reply_time:
                 type: integer
-              places_count:
-                type: integer
-              monthly_rating:
+              reply_quality:
                 type: number
-              monthly_rating_count:
-                type: integer
-              action_phone_count:
-                type: integer
-              action_website_count:
-                type: integer
-              itinerary_count:
-                type: integer
-              views_count:
-                type: integer
-              rating_distribution:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    value:
-                      type: integer
-                    count:
-                      type: integer
-                  additionalProperties:
-                    type: string
+              customer_service_rating:
+                type: number
             additionalProperties:
               type: string
       additionalProperties:
@@ -1072,7 +1051,7 @@ components:
               type: string
       additionalProperties:
         type: string
-    RelationshipMetric_read:
+    DissatisfactionMetric_read:
       type: object
       properties:
         data:
@@ -1084,19 +1063,60 @@ components:
                 type: string
               description:
                 type: string
-              reply_rate:
-                type: number
-              reply_time:
+              count:
                 type: integer
-              reply_quality:
+              percentage:
                 type: number
-              customer_service_rating:
-                type: number
+              pending:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              spam:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              ignored:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              call:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
+              text:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                  percentage:
+                    type: number
+                additionalProperties:
+                  type: string
             additionalProperties:
               type: string
       additionalProperties:
         type: string
-    SatisfactionMetric_read:
+    GoogleScoreMetric_read:
       type: object
       properties:
         data:
@@ -1108,12 +1128,35 @@ components:
                 type: string
               description:
                 type: string
-              average:
+              public_rating:
                 type: number
-              ratings_count:
+              public_rating_count:
                 type: integer
-              responses_count:
+              places_count:
                 type: integer
+              monthly_rating:
+                type: number
+              monthly_rating_count:
+                type: integer
+              action_phone_count:
+                type: integer
+              action_website_count:
+                type: integer
+              itinerary_count:
+                type: integer
+              views_count:
+                type: integer
+              rating_distribution:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    value:
+                      type: integer
+                    count:
+                      type: integer
+                  additionalProperties:
+                    type: string
             additionalProperties:
               type: string
       additionalProperties:
@@ -1187,7 +1230,7 @@ components:
               type: string
       additionalProperties:
         type: string
-    DissatisfactionMetric_read:
+    SatisfactionMetric_read:
       type: object
       properties:
         data:
@@ -1199,55 +1242,12 @@ components:
                 type: string
               description:
                 type: string
-              count:
-                type: integer
-              percentage:
+              average:
                 type: number
-              pending:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              spam:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              ignored:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              call:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
-              text:
-                type: object
-                properties:
-                  count:
-                    type: integer
-                  percentage:
-                    type: number
-                additionalProperties:
-                  type: string
+              ratings_count:
+                type: integer
+              responses_count:
+                type: integer
             additionalProperties:
               type: string
       additionalProperties:

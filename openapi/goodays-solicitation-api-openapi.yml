@@ -186,6 +186,28 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    SolicitationCreate_write:
+      type: object
+      properties:
+        place:
+          type: string
+        type:
+          type: string
+          enum:
+          - email
+          - sms
+        survey:
+          type: string
+        sender:
+          type: string
+        recipient:
+          type: string
+        context:
+          type: object
+          additionalProperties:
+            type: string
+      additionalProperties:
+        type: string
     SolicitationBulkCreate_write:
       type: object
       properties:
@@ -277,28 +299,6 @@ components:
             type: string
         detail_url:
           type: string
-      additionalProperties:
-        type: string
-    SolicitationCreate_write:
-      type: object
-      properties:
-        place:
-          type: string
-        type:
-          type: string
-          enum:
-          - email
-          - sms
-        survey:
-          type: string
-        sender:
-          type: string
-        recipient:
-          type: string
-        context:
-          type: object
-          additionalProperties:
-            type: string
       additionalProperties:
         type: string
   securitySchemes:
