@@ -64,6 +64,122 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Goodays is a company surfaced as a portfolio company of point-nine and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Goodays (formerly Critizr) is Europe's leading customer experience management platform, founded in 2012 and headquartered in Lille, France, helping retailers and multi-location brands understand and act on customer feedback across every point of sale. Its REST API v2 (api.goodays.co/v2) exposes a Core API for the place/level/survey/user hierarchy, a Response API to read and reply to customer reviews, a Solicitation API to request feedback by email/SMS, a Collect API for first-party collection sources, and a Metrics API for NPS, satisfaction, relationship, Google-score, dissatisfaction and retained-customer statistics. Goodays also ships Web, iOS and Android SDKs and embeddable feedback widgets. Added to the API Evangelist network as a point-nine portfolio lead and enriched by the pipeline from Goodays' public developer documentation.
 
-Backed by: point-nine — https://goodays.co
+**Areas:** Company · Customer Experience · Customer Feedback · Voice of the Customer · Surveys · NPS · Reviews · Retail · CRM · Software-as-a-Service
+
+## Goodays on APIs.io
+
+Everything profiled for Goodays is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/goodays/](https://apis.io/providers/goodays/)** — or go straight to one of the APIs or properties below.
+
+### APIs (7)
+
+- [Goodays Core API](https://apis.io/apis/goodays/goodays-core-api/) — The core API from Goodays — 22 operation(s) for core.
+- [Goodays Dashboard API](https://apis.io/apis/goodays/goodays-dashboard-api/) — The dashboard API from Goodays — 1 operation(s) for dashboard.
+- [Goodays Events API](https://apis.io/apis/goodays/goodays-events-api/) — The events API from Goodays — 5 operation(s) for events.
+- [Goodays Response API](https://apis.io/apis/goodays/goodays-response-api/) — The response API from Goodays — 9 operation(s) for response.
+- [Goodays Session API](https://apis.io/apis/goodays/goodays-session-api/) — The session API from Goodays — 1 operation(s) for session.
+- [Goodays Solicitation API](https://apis.io/apis/goodays/goodays-solicitation-api/) — The solicitation API from Goodays — 3 operation(s) for solicitation.
+- [Goodays Stats API](https://apis.io/apis/goodays/goodays-stats-api/) — The stats API from Goodays — 8 operation(s) for stats.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [goodays](https://apis.io/servers/goodays/goodays/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Goodays core API](https://apis.io/collections/goodays/open-goodays-core-api/)
+- [Goodays core dashboard API](https://apis.io/collections/goodays/open-goodays-dashboard-api/)
+- [Goodays core events API](https://apis.io/collections/goodays/open-goodays-events-api/)
+- [Goodays core response API](https://apis.io/collections/goodays/open-goodays-response-api/)
+- [Goodays core session API](https://apis.io/collections/goodays/open-goodays-session-api/)
+- [Goodays core solicitation API](https://apis.io/collections/goodays/open-goodays-solicitation-api/)
+- [Goodays core stats API](https://apis.io/collections/goodays/open-goodays-stats-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Goodays Openapi Overlay](https://apis.io/overlays/goodays/goodays-openapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Goodays Authentication](https://apis.io/security/goodays/goodays-authentication/)
+- [Goodays Domain Security](https://apis.io/security/goodays/goodays-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://goodays.co)
+- [Documentation](https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform)
+- [Getting started](https://apidocs.goodays.co/docs/welcome-to-goodays-api-platform)
+- [API reference](https://apidocs.goodays.co/reference/places_list)
+- [Support](https://help.goodays.co/en)
+- [Blog](https://community.goodays.co/en/blog)
+- [Compliance](https://community.goodays.co/privacy-policy)
+- [Privacy policy](https://community.goodays.co/privacy-policy)
+- [GitHub](https://github.com/critizr)
+
+## API Evangelist rating
+
+**Kin Score 34.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 42.4 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 25.0 |
+
+**Agent readiness 16.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/goodays/](https://apis.io/providers/goodays/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Goodays: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/goodays/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
